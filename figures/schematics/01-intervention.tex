@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[heading] at (0,8.55) {(a) Two-block language model};
+\node (tokens) at (.25,7.5) {$x_{0:T-1}$};
+\node[module,text width=1.65cm] (stem) at (2.5,7.5) {Input stem};
+\node[focal,text width=2.65cm] (b1) at (6.1,7.5) {First block $B_1$};
+\node[module,text width=3.2cm] (b2) at (10.65,7.5) {Global-attention\\block $B_2$};
+\node[module,text width=1.85cm] (head) at (14.9,7.5) {Output head};
+\node (logits) at (17.1,7.5) {$\ell_{0:T-1}$};
+\foreach \a/\b in {tokens/stem,stem/b1,b1/b2,b2/head,head/logits}{\draw[flow] (\a.east)--(\b.west);}
+
+\draw[rule,line width=.45pt] (0,6.15)--(17.65,6.15);
+\node[heading] at (0,5.7) {(b) First-block alternatives};
+\foreach \id/\x/\name in {g/2.8/Full attention,l/8.55/Local + global,m/14.3/ModalStripe}{
+\node[font=\sffamily\fontsize{10}{12}\selectfont] at (\x,5.0) {\name};
+\node (in\id) at (\x,4.42) {$H^{(0)}$};
+\node[module,text width=3.65cm] (ff\id) at (\x,.95) {Feed-forward\\$\mathcal R_F$};
+\node (out\id) at (\x,.05) {$H^{(1)}$};
+\draw[flow] (ff\id.south)--(out\id.north);
+}
+\node[module,text width=3.65cm] (ag) at (2.8,3.5) {Global attention\\$\mathcal R_G$};
+\node[module,text width=3.65cm] (al) at (8.55,3.5) {Local attention ($w=8$)\\$\mathcal R_L$};
+\node[focal,text width=3.65cm] (modal) at (14.3,3.5) {Modal mixer\\$\mathcal R_M$};
+\node[module,text width=3.65cm] (ml) at (14.3,2.22) {Local attention ($w=8$)\\$\mathcal R_L$};
+\draw[flow] (ing.south)--(ag.north);
+\draw[flow] (ag.south)--(ffg.north);
+\draw[flow] (inl.south)--(al.north);
+\draw[flow] (al.south)--(ffl.north);
+\draw[flow] (inm.south)--(modal.north);
+\draw[flow] (modal.south)--(ml.north);
+\draw[flow] (ml.south)--(ffm.north);
+\draw[rule,line width=.45pt] (0,-.55)--(17.65,-.55);
+\node[label,anchor=north west,text width=17.3cm,align=left] at (0,-.8) {Every box in (b) is a pre-normalized residual update: $\mathcal R_f(H)=H+f(\operatorname{LN}(H))$. ModalStripe's modal and local updates reuse the same LayerNorm parameters. Feed-forward hidden widths depend on the allocation rule.};
+\end{tikzpicture}

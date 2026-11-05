@@ -1,0 +1,9 @@
+\begin{tabular}{lrrr}\toprule
+Model and budget & Updates & Test loss (nats) & PPL\\\midrule
+Full attention & 1,800 & 1.7996 $\pm$ 0.0093 & 6.047 \\
+Local + global & 1,800 & 1.7857 $\pm$ 0.0033 & 5.964 \\
+ModalStripe & 1,800 & 1.7213 $\pm$ 0.0016 & 5.592 \\
+Full, calibrated budget & 2,439 & 1.7406 $\pm$ 0.0045 & 5.701 \\
+Full, elapsed-time budget & 4,391 avg. & 1.6472 $\pm$ 0.0073 & 5.192 \\
+Local-only$^{\dagger}$ & 1,800 & 1.7676 $\pm$ 0.0022 & 5.857 \\
+\bottomrule\end{tabular}

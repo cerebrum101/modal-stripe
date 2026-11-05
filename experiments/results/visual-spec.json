@@ -1,0 +1,29 @@
+{
+  "claim": "Compare retrieval, character prediction, and measured CPU costs without inferring large-model performance",
+  "source": "results/*json, summarized in summary.json",
+  "visual_form": "quality: paired horizontal dot plots; costs: ordered line plots",
+  "order": [
+    "full",
+    "local",
+    "spectral",
+    "hybrid",
+    "striped"
+  ],
+  "uncertainty": "show all three training seeds; timing min-max over repeated measurements",
+  "dimensions_inches": [
+    12,
+    5.6
+  ],
+  "formats": [
+    "svg",
+    "png"
+  ],
+  "references": [
+    "OAI-VIS-002",
+    "OAI-VIS-011",
+    "OAI-VIS-012",
+    "OAI-VIS-004",
+    "OAI-VIS-095"
+  ],
+  "precision": "accuracy 1 decimal percent; character perplexity 2 decimals; latency 3 significant figures"
+}

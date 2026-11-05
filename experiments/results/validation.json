@@ -1,0 +1,10 @@
+{
+  "aggregation_checks": "passed",
+  "independent_ratio_checks": {
+    "spectral_training_speedup": 1.4931587836937243,
+    "spectral_decode_speedup": 1.6550475058794614,
+    "striped_cache_reduction_factor": 1.9921582820605621
+  },
+  "visual_review": "Final-size color and grayscale renders inspected after spacing corrections; no overlapping labels; SVG preflights passed.",
+  "limitations": "CPU screening; small corpus; unequal training FLOPs; no convergence study or GPU measurement."
+}

@@ -1,0 +1,3 @@
+# Measured experiment runtime; see experiments/requirements-lock.txt for the full snapshot.
+torch==2.15.0
+numpy==2.5.4

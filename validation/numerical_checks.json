@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "matrix_feedback_cell_vs_fft": 3.3527612686157227e-08,
+    "state_buffer_vs_prefill": 1.7068173292500433e-06,
+    "B1_composition_full": 0.0,
+    "B1_composition_localglobal": 0.0,
+    "B1_composition_striped": 0.0
+  },
+  "source_model_sha256": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d",
+  "scope": "Deterministic operator checks only; no training or new scientific benchmark."
+}

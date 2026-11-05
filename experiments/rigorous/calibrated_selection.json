@@ -1,0 +1,15 @@
+{
+  "decision": {
+    "steps": 2439,
+    "median_time_ratio": 1.3545903331181763,
+    "training_timing_sha256": "d56cee50300c2e45d4ec3e7f07350a204ecb9e48a858e789838ac76567c72db7",
+    "controller_sha256": "e0ea23d64a3bab89c21bb5f8030dcf4dd1178a6f1f30af06743029e617f9b987",
+    "plan_sha256": "c1cb8219ebbd284d2f263fb6f45d2ab28593d9115a729e456d6e90e96b6f0802",
+    "rule": "ceil(1800 * median paired striped/full step-ms ratio), context128"
+  },
+  "runs": [
+    "runs/3cf096ba9be1b4429b66",
+    "runs/86cb9bcbe37564e3ba0e",
+    "runs/aaa2b714ea6d8b6ee3db"
+  ]
+}

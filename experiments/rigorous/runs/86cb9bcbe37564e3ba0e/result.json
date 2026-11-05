@@ -1,0 +1,177 @@
+{
+  "config": {
+    "phase": "calibrated_time",
+    "kind": "full",
+    "budget": "parameters",
+    "seed": 1,
+    "lr": 0.002,
+    "steps": 2439,
+    "context": 128,
+    "batch": 16,
+    "calibration": {
+      "steps": 2439,
+      "median_time_ratio": 1.3545903331181763,
+      "training_timing_sha256": "d56cee50300c2e45d4ec3e7f07350a204ecb9e48a858e789838ac76567c72db7",
+      "controller_sha256": "e0ea23d64a3bab89c21bb5f8030dcf4dd1178a6f1f30af06743029e617f9b987",
+      "plan_sha256": "c1cb8219ebbd284d2f263fb6f45d2ab28593d9115a729e456d6e90e96b6f0802",
+      "rule": "ceil(1800 * median paired striped/full step-ms ratio), context128"
+    },
+    "provenance": {
+      "code": {
+        "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+        "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+      },
+      "data": {
+        "hamlet": {
+          "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+          "characters": 178099,
+          "gutenberg": 1524
+        },
+        "alice": {
+          "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+          "characters": 144861,
+          "gutenberg": 11
+        },
+        "moby": {
+          "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+          "characters": 1220651,
+          "gutenberg": 2701
+        }
+      },
+      "torch": "2.15.0",
+      "python": "3.13.3",
+      "device": "cpu",
+      "threads": 2,
+      "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+    }
+  },
+  "steps": 2439,
+  "tokens": 4995072,
+  "train_seconds": 44.19627709992346,
+  "parameters": 120768,
+  "history": [
+    {
+      "step": 300,
+      "train_seconds": 5.559965128049953,
+      "dev": {
+        "hamlet": {
+          "nats": 2.2462841854109383,
+          "ppl": 9.45254658797086,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 2.1269204371132684,
+          "ppl": 8.38899256105009,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 2.138628628888657,
+          "ppl": 8.487789734277769,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 600,
+      "train_seconds": 11.302585793251637,
+      "dev": {
+        "hamlet": {
+          "nats": 2.105995319595007,
+          "ppl": 8.215275766617403,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.9797363075833094,
+          "ppl": 7.24083338054498,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.9989129661623062,
+          "ppl": 7.381028308952667,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 1200,
+      "train_seconds": 22.28394605536596,
+      "dev": {
+        "hamlet": {
+          "nats": 1.9792856230032398,
+          "ppl": 7.237570783849749,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.803630574719841,
+          "ppl": 6.071651080277679,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.8509625518504813,
+          "ppl": 6.365944125803238,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 1800,
+      "train_seconds": 32.791525470034685,
+      "dev": {
+        "hamlet": {
+          "nats": 1.913641488855321,
+          "ppl": 6.777724924996293,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.7421467073629509,
+          "ppl": 5.7095870888289175,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.7765795693576907,
+          "ppl": 5.909608404197647,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 2439,
+      "train_seconds": 44.19627709992346,
+      "dev": {
+        "hamlet": {
+          "nats": 1.8972853254084436,
+          "ppl": 6.667769027947066,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.6990190500055957,
+          "ppl": 5.468580355891177,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.7492897918987187,
+          "ppl": 5.750517161520045,
+          "targets": 122064
+        }
+      }
+    }
+  ],
+  "dev": {
+    "hamlet": {
+      "nats": 1.8972853254084436,
+      "ppl": 6.667769027947066,
+      "targets": 17809
+    },
+    "alice": {
+      "nats": 1.6990190500055957,
+      "ppl": 5.468580355891177,
+      "targets": 14485
+    },
+    "moby": {
+      "nats": 1.7492897918987187,
+      "ppl": 5.750517161520045,
+      "targets": 122064
+    }
+  },
+  "checkpoint_sha256": "b398729dfc2410ddca7298dfbe5e864cadb5f20d4aa905df38c47be9fce48acb"
+}

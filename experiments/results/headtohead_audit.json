@@ -1,0 +1,206 @@
+[
+  {
+    "corpus": "hamlet",
+    "kind": "full",
+    "seed": 0,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 7.41096487145998,
+        "targets": 17809
+      }
+    },
+    "causality_max_error": 0.0,
+    "cached_max_error": 3.337860107421875e-06
+  },
+  {
+    "corpus": "hamlet",
+    "kind": "striped",
+    "seed": 0,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 6.760902994747772,
+        "targets": 17809
+      }
+    },
+    "causality_max_error": 2.384185791015625e-06,
+    "cached_max_error": 6.318092346191406e-06
+  },
+  {
+    "corpus": "hamlet",
+    "kind": "full",
+    "seed": 1,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 7.511556442275416,
+        "targets": 17809
+      }
+    },
+    "causality_max_error": 0.0,
+    "cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "corpus": "hamlet",
+    "kind": "striped",
+    "seed": 1,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 6.761503318916352,
+        "targets": 17809
+      }
+    },
+    "causality_max_error": 2.384185791015625e-06,
+    "cached_max_error": 3.5762786865234375e-06
+  },
+  {
+    "corpus": "hamlet",
+    "kind": "full",
+    "seed": 2,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 7.397596144289984,
+        "targets": 17809
+      }
+    },
+    "causality_max_error": 0.0,
+    "cached_max_error": 2.6226043701171875e-06
+  },
+  {
+    "corpus": "hamlet",
+    "kind": "striped",
+    "seed": 2,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 6.77169135310852,
+        "targets": 17809
+      }
+    },
+    "causality_max_error": 2.1457672119140625e-06,
+    "cached_max_error": 5.7220458984375e-06
+  },
+  {
+    "corpus": "mixed3",
+    "kind": "full",
+    "seed": 0,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 9.153428615206787,
+        "targets": 17809
+      },
+      "alice": {
+        "ppl": 8.26510303454525,
+        "targets": 14486
+      },
+      "moby_dick": {
+        "ppl": 8.450967753962102,
+        "targets": 122065
+      }
+    },
+    "causality_max_error": 0.0,
+    "cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "corpus": "mixed3",
+    "kind": "striped",
+    "seed": 0,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 8.453486405086359,
+        "targets": 17809
+      },
+      "alice": {
+        "ppl": 7.46571237541895,
+        "targets": 14486
+      },
+      "moby_dick": {
+        "ppl": 7.6490124730950395,
+        "targets": 122065
+      }
+    },
+    "causality_max_error": 1.9073486328125e-06,
+    "cached_max_error": 4.9173831939697266e-06
+  },
+  {
+    "corpus": "mixed3",
+    "kind": "full",
+    "seed": 1,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 9.240233399706389,
+        "targets": 17809
+      },
+      "alice": {
+        "ppl": 8.27047663685583,
+        "targets": 14486
+      },
+      "moby_dick": {
+        "ppl": 8.420219743996338,
+        "targets": 122065
+      }
+    },
+    "causality_max_error": 0.0,
+    "cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "corpus": "mixed3",
+    "kind": "striped",
+    "seed": 1,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 8.517472743859857,
+        "targets": 17809
+      },
+      "alice": {
+        "ppl": 7.480850524925815,
+        "targets": 14486
+      },
+      "moby_dick": {
+        "ppl": 7.632227610782521,
+        "targets": 122065
+      }
+    },
+    "causality_max_error": 1.9073486328125e-06,
+    "cached_max_error": 5.8785080909729e-06
+  },
+  {
+    "corpus": "mixed3",
+    "kind": "full",
+    "seed": 2,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 9.088895038292662,
+        "targets": 17809
+      },
+      "alice": {
+        "ppl": 8.16139209529012,
+        "targets": 14486
+      },
+      "moby_dick": {
+        "ppl": 8.391191600989826,
+        "targets": 122065
+      }
+    },
+    "causality_max_error": 0.0,
+    "cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "corpus": "mixed3",
+    "kind": "striped",
+    "seed": 2,
+    "deterministic_holdout": {
+      "hamlet": {
+        "ppl": 8.526337606497622,
+        "targets": 17809
+      },
+      "alice": {
+        "ppl": 7.538003101835063,
+        "targets": 14486
+      },
+      "moby_dick": {
+        "ppl": 7.645405166963501,
+        "targets": 122065
+      }
+    },
+    "causality_max_error": 2.2649765014648438e-06,
+    "cached_max_error": 5.3942203521728516e-06
+  }
+]

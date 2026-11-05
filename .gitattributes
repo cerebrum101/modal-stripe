@@ -1,0 +1,5 @@
+# Release integrity hashes refer to exact bytes, including frozen source snapshots.
+* -text
+*.pt binary
+*.pdf binary
+*.png binary

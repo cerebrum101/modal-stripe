@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+\begin{axis}[name=left,width=8.1cm,height=5.0cm,xmode=log,log basis x=2,xmin=110,xmax=9500,xtick={128,512,2048,8192},xticklabels={128,512,2{,}048,8{,}192},ymin=.1,ymax=.36,ytick={.1,.2,.3},xlabel={Prefix length (characters; log scale)},ylabel={Decode (ms/character)},title={(a) CPU decoding},legend to name=models,legend columns=3]
+\addplot[black,mark=*,mark options={fill=black},mark size=2pt] coordinates {(128,0.1458780310) (512,0.1596957500) (2048,0.2128676248) (8192,0.3267986146)};\addlegendentry{Full attention}
+\addplot[only marks,black!55,mark=*,mark size=.65pt,forget plot] coordinates {(128,0.1456796872) (128,0.1462031250) (128,0.1457512808) (512,0.1593541874) (512,0.1604713434) (512,0.1592617191) (2048,0.2113189994) (2048,0.2151093749) (2048,0.2121745001) (8192,0.3143554686) (8192,0.3252994684) (8192,0.3407409067)};
+\addplot[black!65,mark=square*,mark options={fill=black!65},dashed,mark size=2pt] coordinates {(128,0.1444179688) (512,0.1523029481) (2048,0.1826128434) (8192,0.2335121562)};\addlegendentry{Local + global}
+\addplot[only marks,black!55,mark=*,mark size=.65pt,forget plot] coordinates {(128,0.1442656248) (128,0.1444700629) (128,0.1445182188) (512,0.1519453126) (512,0.1525390626) (512,0.1524244690) (2048,0.1777148436) (2048,0.1872513121) (2048,0.1828723744) (8192,0.2374518126) (8192,0.2298971558) (8192,0.2331875003)};
+\addplot[black,mark=triangle*,mark options={fill=black},line width=.9pt,mark size=2pt] coordinates {(128,0.1773507086) (512,0.1849761359) (2048,0.2157443541) (8192,0.2722595418)};\addlegendentry{ModalStripe}
+\addplot[only marks,black!55,mark=*,mark size=.65pt,forget plot] coordinates {(128,0.1771067809) (128,0.1769036571) (128,0.1780416878) (512,0.1859713757) (512,0.1841445319) (512,0.1848125003) (2048,0.2130703124) (2048,0.2163880317) (2048,0.2177747183) (8192,0.2739453130) (8192,0.2720703123) (8192,0.2707630001)};
+\end{axis}
+\begin{axis}[at={(left.south east)},anchor=south west,xshift=2.75cm,width=6.4cm,height=5.0cm,xmin=0,xmax=10,xtick={0,4,8},ymin=-.55,ymax=2.55,ytick={0,1,2},yticklabels={ModalStripe,Local + global,Full attention},xlabel={Retained cache (MiB)},title={(b) Cache at prefix 8{,}192},axis y line*=left,y axis line style={draw=none},ytick style={draw=none}]
+\addplot[black,mark=*,mark options={fill=black},only marks,mark size=2pt] coordinates {(8.031494141,2)};\node[anchor=west,font=\fontsize{10}{12}\selectfont] at (axis cs:8.151494140625,2){8.03};
+\addplot[black!65,mark=square*,mark options={fill=black!65},dashed,only marks,mark size=2pt] coordinates {(4.019775391,1)};\node[anchor=west,font=\fontsize{10}{12}\selectfont] at (axis cs:4.139775390625,1){4.02};
+\addplot[black,mark=triangle*,mark options={fill=black},line width=.9pt,only marks,mark size=2pt] coordinates {(4.023681641,0)};\node[anchor=west,font=\fontsize{10}{12}\selectfont] at (axis cs:4.143681640625,0){4.02};
+\end{axis}
+\node[anchor=south] at ($(left.north east)+(.7,.48)$) {\ref{models}};
+\end{tikzpicture}

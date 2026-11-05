@@ -1,0 +1,289 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,microtype}
+\usepackage{caption,placeins,graphicx}
+\input{figures/plots/style.tex}
+\usepackage{helvet}
+\input{figures/schematics/style.tex}
+\usepackage[hidelinks]{hyperref}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{1.5em}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\pagestyle{plain}
+\newcommand{\model}{ModalStripe}
+\newcommand{\R}{\mathbb{R}}
+\title{ModalStripe: Modal Memory and Attention\\in Small Language Models}
+\author{Atay Kim\\[3pt]\normalsize Nazarbayev University\\\normalsize Astana, Kazakhstan\\\normalsize\href{mailto:atay.kim@nu.edu.kz}{\texttt{atay.kim@nu.edu.kz}}}
+\date{\small November 5, 2026\quad (v0.5)}
+\hypersetup{pdftitle={ModalStripe: Modal Memory and Attention in Small Language Models},pdfauthor={Atay Kim},pdfsubject={Version 0.5, November 5, 2026}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study whether a small language model benefits from combining modal memory with attention. ModalStripe replaces one of two global-attention blocks with a gated modal convolution followed by local attention. On two books excluded from training and primary model selection, it reaches character perplexity 5.592, compared with 6.047 for full attention and 5.964 for a local-plus-global control at the same training-character budget. The result persists with fixed feed-forward widths, but the advantage over attention falls to about 1.9\% under a timing-calibrated training budget. CPU latency improves at long prefixes and the retained cache is roughly halved; most of that cache saving also occurs without the modal branch. A local-only baseline is a strong resource alternative, and prediction quality deteriorates beyond the trained context. The modal branch improves prediction at this scale; its training cost reduces the advantage under timing calibration.
+\end{abstract}
+
+\section{Introduction}
+A hybrid language model can use less global attention without becoming a better model in practice. It may need more training, save cache while adding latency, or run quickly at a context length where its predictions have become worse. A useful comparison has to measure these effects together.
+
+This paper examines one such design. \model\ has two blocks: the first combines a gated modal convolution with local attention, and the second retains full causal attention. The modal branch uses damped complex exponentials, allowing the same operator to run as an FFT convolution on complete sequences and as a compact recurrence during decoding. We compare it with two global-attention blocks and with a local-plus-global model that removes only the modal branch.
+
+The experiments are deliberately small: width-64 character models, three optimization seeds, and transfer to two books. That scale makes a controlled audit practical, but limits what the results can establish. The main question is whether the modal branch earns its cost under explicit data, parameter and timing budgets. We find a consistent gain at equal training characters, a smaller gain after timing calibration, and meaningful weaknesses in context extrapolation. We also retain unfavorable results and distinguish the original comparisons from later exploratory checks.
+
+\section{Relation to existing models}
+ModalStripe uses established sequence-modeling ideas. Structured state-space models such as S4 provide recurrent and convolutional views of long-sequence operators \cite{s4}. H3 studies recall limitations and attention hybrids \cite{h3}; Hyena combines long convolutions with data-controlled gates \cite{hyena}; and StripedHyena~2 develops convolutional multi-hybrids at scale \cite{stripedhyena}. These models provide the starting point for our study. We compare small, controlled implementations to understand what the modal branch contributes.
+
+The connection to Fourier neural operators \cite{fno} is spectral computation, not demonstrated PDE-learning or resolution-transfer behavior. Zoology motivates separating language prediction from associative recall \cite{zoology}; state-space duality and gated delta networks offer further approaches to efficient interaction and memory updates \cite{ssd,deltanet}. Our character-perplexity results do not measure their capabilities or establish a new hybrid-model family.
+
+\section{Model and comparisons}
+All models start from random weights and share a fixed 128-symbol ASCII inventory, two blocks, width 64, four attention heads, sinusoidal positions \cite{vaswani}, and an untied prediction head. A common causal stem adds a linear projection of the previous character embedding. Each mixer has a normalized residual update, followed by a normalized, two-layer GELU feed-forward network. There is no dropout.
+
+The full-attention baseline uses global causal attention in both blocks. The local-plus-global control uses a window-8 local block followed by a global block. \model\ inserts the modal mixer before local attention in the first block. Both mixers act sequentially, sharing the block's first layer-normalization parameters. The global block is retained. Appendix~\ref{app:methods} gives the full block definition and initialization.
+
+\begin{figure}[htbp]
+\centering\resizebox{\textwidth}{!}{\input{figures/schematics/01-intervention.tex}}
+\caption{Model backbone and first-block alternatives. Each lower-panel box denotes a pre-normalized residual update. ModalStripe adds a modal update before local attention. All primary models retain the second global-attention block; weights are trained separately. Figure~\ref{fig:statecell} expands the modal decoding operator.}
+\label{fig:architecture}
+\end{figure}
+
+For normalized input $a_t$, the modal branch writes
+$u_t=(W_v a_t)\odot\sigma(W_w a_t)$ and reads through
+$g_t=\sigma(W_r a_t)$. Its output is $W_o(z_t\odot g_t)$, where
+\begin{equation}
+ z_t=\sum_{j=0}^{t}K_{t-j}\odot u_j,\qquad
+ K_{\ell,k}=\operatorname{Re}\sum_{r=1}^{8}c_{r,k}p_r^\ell,
+ \quad p_r=e^{-\alpha_r+\mathrm{i}\omega_r},\quad\alpha_r>0.
+ \label{eq:modal}
+\end{equation}
+Poles are shared across channels; complex residues are channel-specific. The kernel uses nonnegative lags, so zero-padding to at least $2T-1$ before FFT evaluation prevents circular wraparound. The equivalent decoding state is
+\begin{equation}
+ s_{t,r,k}=p_r s_{t-1,r,k}+u_{t,k},\qquad
+ z_{t,k}=\operatorname{Re}\sum_r c_{r,k}s_{t,r,k}.
+ \label{eq:state}
+\end{equation}
+This finite state belongs to the modal branch. The complete model still has a growing global KV cache and quadratic full-sequence attention work.
+
+We test two allocation rules. Approximate parameter matching gives about 121,000 parameters per model, but reduces the mixed block's feed-forward width from 261 to 124. A second condition fixes every feed-forward width at 256, allowing the hybrid to have more parameters. Parameter matching is tested at both training contexts; fixed width is tested at context 128. The comparisons separate a similar total budget from a fixed feed-forward allocation.
+
+\section{Experimental setup}
+\paragraph{Data and training.}
+Training uses the first 80\% of normalized \emph{Hamlet}, \emph{Alice's Adventures in Wonderland}, and \emph{Moby-Dick}; development uses the next 10\%. Windows never cross document or split boundaries; starts are sampled uniformly from the pooled set of valid training starts. Gutenberg wrappers are stripped, typographic punctuation is normalized, and remaining non-ASCII characters are dropped. The fixed inventory avoids selecting characters from the test set. The source texts had already informed earlier exploratory work and are development sources at the project level.
+
+The primary final books are \emph{Frankenstein} and \emph{The Adventures of Sherlock Holmes}, excluded from training and primary model selection. Primary model settings were fixed before final-book evaluation. We train for 1,800 updates with 2,048 input characters per update: batch 16 at context 128, or batch 4 at context 512. All runs use AdamW \cite{adamw}, weight decay 0.01, gradient clipping at 1, and cosine learning-rate decay to 10\% of the initial rate. Seeds are 0, 1 and 2.
+
+Each architecture/allocation/context condition receives the same seed-0, 400-update learning-rate sweep over $\{0.0005,0.001,0.002\}$. Selection uses equally weighted development-book loss in reset-128 windows. Every condition selects 0.002, the grid's upper endpoint. This is limited tuning, including for context-512 training, and neither optimal rates nor convergence are established.
+
+\paragraph{Quality and training budgets.}
+The primary score predicts every final-book character once, except the initial character, in consecutive reset-128 windows. We average loss equally across the two books for each seed, then report the seed mean, sample SD, and its exponentiated mean as geometric perplexity. Seed SD is not a confidence interval across language distributions.
+
+Two additional attention baselines test training cost. Literal elapsed-time matching gives attention each paired hybrid run's accumulated training-step time, with evaluation excluded. Because host load changed, we also use an interleaved calibration: the median of 60 paired hybrid/attention step-time ratios is 1.35459, giving attention $\lceil1800\times1.35459\rceil=2439$ updates. This rule was specified before inspecting primary final scores and uses timing alone. It estimates a model-step time budget, not exact FLOPs or total runtime.
+
+\paragraph{Measurement and audits.}
+Measurements use an Apple M1 CPU, two PyTorch threads and float32; no GPU result is reported. Inference timing warms the models and randomizes model/seed order within nine repeats, measuring prefill with cache construction and a 32-character greedy continuation. Training-step timing uses three warmup updates and 20 interleaved repeats per seed. Tables average per-seed medians. Full attention uses a native library operator; local attention and modal operations are unfused reference implementations.
+
+We check sampling, shifted targets, document boundaries, future-token influence, future gradients, cached/full agreement, local attention against a dense reference, and spectral finite-difference gradients. All 36 evaluated checkpoints pass the tested causality and cached-generation checks, including an 8,192-character prefix. Code, data, configurations, weights and raw timing records have saved hashes. Details and the later exploratory audits appear in the appendix.
+
+\section{Results}
+\subsection{Prediction quality and training budget}
+Figure~\ref{fig:quality} shows a 7.5\% perplexity reduction against full attention at equal training characters. Adding the modal branch improves on local plus global attention in all three seeds: paired loss differences are $-0.0684$, $-0.0645$ and $-0.0602$ nats. The direction persists with fixed feed-forward widths, where the hybrid has extra parameters (Appendix~\ref{app:results}). This supports adding the complete modal branch in this setup; it does not isolate Fourier modes from other possible extra gated mixers.
+
+\begin{figure}[htbp]
+\centering\resizebox{\textwidth}{!}{\input{figures/plots/quality.tex}}
+\caption{Final-book reset-128 loss for parameter-matched models; lower is better. Large markers are three-seed means, whiskers are sample SDs, and small markers are individual seeds. (a) All models receive 1,800 updates. $^*$Exploratory local-only control. (b) Attention receives different training allowances. $^\dagger$Elapsed-time runs use 4,417, 4,609 and 4,146 updates; changing host load confounds this comparison. Exact scores are in Table~\ref{tab:comparison}.}
+\label{fig:quality}
+\end{figure}
+
+Under the timing-calibrated allowance, attention improves to PPL 5.701, leaving a hybrid advantage of about 1.9\%. Literal elapsed-time matching instead gives attention 4,417, 4,609 and 4,146 updates and reverses the result. Host-load drift prevents treating that reversal as clean compute matching, but it is important to retain. Neither comparison supports an unconditional training-efficiency claim.
+
+\subsection{CPU latency and cache}
+At short prefixes the hybrid is slower than full attention. At 8k, it has faster measured prefill and decoding and roughly half the retained cache (Figure~\ref{fig:resources}). The local-plus-global control saves almost the same cache and runs faster. Removing one global-attention block accounts for most of the storage reduction; the modal state adds only 4\,KiB.
+
+\begin{figure}[htbp]
+\centering\resizebox{\textwidth}{!}{\input{figures/plots/resources.tex}}
+\caption{CPU decoding and retained cache for context-128-trained models; lower is better. Apple M1, float32, two threads, batch one, 32-character continuation. (a) Lines join means of three seed medians; small points are seed medians from nine interleaved repeats per seed. The horizontal axis is logarithmic. (b) Retained tensor payload at prefix 8,192, excluding weights and peak process memory. Table~\ref{tab:timing} gives exact values and prefill timing.}
+\label{fig:resources}
+\end{figure}
+
+At training context 128, mean seed-median step times are 17.289\,ms for attention and 24.411\,ms for the hybrid. The ratio of those means differs from the median paired ratio used for calibration. At context 512 they are 26.445 and 27.903\,ms. These measurements concern this implementation and hardware, not production kernels or GPU throughput.
+
+A later local-only control reaches PPL 5.857. In its separate seed-0 timing audit, it retains only 8.25\,KiB at 8k and decodes faster than the hybrid. It therefore offers a strong resource tradeoff for character prediction. Its bounded receptive field does not provide distant retrieval, however. The architecture control was added after primary outcomes were viewed and remains exploratory; its learning-rate choice still uses development data only.
+
+\subsection{Evaluation beyond the training context}
+Our first extrapolation test scored 128 continuation characters after a prefix. Even its 128-prefix condition therefore exceeded the positions seen in context-128 training. We retain it as a continuation test, not a fixed-window baseline. A corrective diagnostic predicts single targets from exactly the named amount of history. It uses seed 0 and 64 fixed positions per book, shared across all input lengths.
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{ModalStripe's corrective fixed-window diagnostic. PPL uses identical target positions at each history length. This small, single-seed audit was added after primary outcomes were inspected. Full comparisons are in Appendix~\ref{app:results}.}
+\label{tab:context}
+\input{paper/tables/length_summary.tex}
+\end{minipage}\end{center}
+
+The drop in quality at longer histories remains clear in this diagnostic. Training at 512 reduces it but does not remove it. Longer history also changes absolute positional indices, so the test cannot separate positional extrapolation from the effects of additional context. Faster processing at 8k should not be read as preserved prediction quality there.
+
+\section{Discussion and conclusion}
+The modal branch improves short-window transfer prediction under both allocation rules. Its advantage over attention becomes small under the calibrated training allowance, while simpler attention controls expose useful resource alternatives. These results support a narrow small-model tradeoff.
+
+The evidence covers two final books and three optimization seeds. Training losses are still improving late in the schedule, the selected learning rate is at the grid boundary, and the later context/local-only audits are exploratory. Larger token models, broader tasks, longer training, stronger mixer ablations and optimized GPU comparisons are needed for stronger claims. In particular, the hybrid retains one global-attention block: it has an $O(T)$ KV cache and quadratic attention work, not a bounded-memory or wholly subquadratic architecture.
+
+\paragraph{Acknowledgments.}
+OpenAI Codex assisted with implementation, auditing and manuscript preparation.
+\label{main:last}
+\clearpage
+\input{paper/references.tex}
+\clearpage
+\appendix
+\section{Model and implementation details}\label{app:methods}
+The input at position $t$ is $E[x_t]+W_{\mathrm{prev}}E[x_{t-1}]+\operatorname{PE}(t)$, with a zero previous embedding at a window boundary. The sinusoidal encoding uses base 10,000. Each mixer performs a pre-normalized residual update; the mixed block reuses its first normalization parameters before both sequential mixers. A second normalization precedes the feed-forward network, and a final normalization precedes the untied, bias-free output head. Linear maps are bias-free except the affine parameters of layer normalization. The network has no dropout.
+
+In Eq.~\eqref{eq:modal}, $\alpha_r=\exp(\theta_r)$. Initial rates span $1/256$ to $1/2$ logarithmically; frequencies are equally spaced from 0 to $\pi$. Real and imaginary residue components are initialized with standard deviation $0.1/\sqrt8$. Other weights use the archived PyTorch defaults. Pole magnitudes below one do not by themselves bound the gain of the residual model.
+
+For a sequence of length $T$, the kernel includes lags 0 through $T-1$. FFT evaluation pads to the next power of two at least $2T-1$, multiplies input/kernel transforms channelwise, inverts and retains the first $T$ positions. This computes a one-sided convolution. Expanding Eq.~\eqref{eq:state} gives the same operator from zero initial state. Prefill constructs the recurrent state from the observed prefix. States are complex64 and other weights/activations are float32.
+
+Approximate parameter matching chooses each block's feed-forward width as
+\[
+ d_{\mathrm{ff}}=\max\left(8,\operatorname{round}\frac{50{,}000-P_M-4d}{2d}\right),
+\]
+where $P_M$ counts mixer parameters and $4d$ counts the two layer normalizations. Full/local blocks use width 261, and the modal/local block 124. In the fixed-width condition, both blocks use 256. Nominal totals include an inherited, inactive 64-parameter frequency-feature vector and, in ModalStripe, one inactive frequency-gate scalar. No frequency features are supplied; these parameters receive no gradients. The paper preserves the archived totals rather than silently changing their definition.
+
+AdamW uses moments $(0.9,0.999)$ and epsilon $10^{-8}$. The primary schedule is cosine with a 0.1 floor. Literal elapsed-time runs decay by elapsed budget; calibrated runs use a fixed 2,439-update schedule. In every condition, matching a seed matches the training-data stream; differently shaped weights need not share an initialization. Training at 512 uses fewer, longer examples at the same character budget and is tuned against reset-128 development loss. No independent convergence or long-window hyperparameter optimum is established.
+
+\subsection{Modal decoding operator and residual blocks}
+\begin{figure}[htbp]
+\centering\resizebox{\textwidth}{!}{\input{figures/schematics/02-state-cell.tex}}
+\caption{One modal decoding step. The write and read gates depend on normalized input. The fixed broadcast copies each write into all modes before the state addition. The delay is the modal state buffer; the full model also retains a global attention KV cache. Parameters are fixed during decoding.}
+\label{fig:statecell}
+\end{figure}
+
+For $R=8$ and $d=64$, write the state as $S_t\in\mathbb C^{R\times d}$ and let $P=\operatorname{diag}(p_1,\ldots,p_R)$. Define
+\begin{align}
+ u_t=\psi(a_t)&=(W_v a_t)\odot\sigma(W_w a_t),&
+ g_t=\rho(a_t)&=\sigma(W_r a_t),\\
+ \mathcal B(u_t)&=\mathbf 1_R u_t^{\mathsf T},&
+ S_t&=P S_{t-1}+\mathcal B(u_t),\quad S_{-1}=0,\\
+ z_{t,k}=\mathcal C(S_t)_k&=\operatorname{Re}\sum_{r=1}^{R}c_{r,k}S_{t,r,k},&
+ m_t&=W_o(z_t\odot g_t).
+\end{align}
+Both state summands have shape $R\times d$. Residue multiplication uses no complex conjugation. $P$ is shared across channels; the residues are channel-specific. Gates and projections are nonlinear or linear maps of the current representation as shown; the linear state transition does not make the complete network linear.
+
+Expanding the recurrence gives $S_{t,r,k}=\sum_{j=0}^{t}p_r^{t-j}u_{j,k}$, which recovers Eq.~\eqref{eq:modal}. Prefill constructs $S_{T-1}$ from that weighted sum, separately from the FFT evaluation of sequence outputs. For $N=2^{\lceil\log_2(2T-1)\rceil}$, the latter is
+\begin{equation}
+ Z=\left[\operatorname{irFFT}_{N}\left(
+ \operatorname{rFFT}_{N}(U)\odot\operatorname{rFFT}_{N}(K)\right)\right]_{0:T}.
+\end{equation}
+The padding and slice compute the causal convolution without circular wraparound.
+
+For the complete first block, the sequential updates are
+\begin{align}
+ H^m&=H^{(0)}+\operatorname{Modal}(\operatorname{LN}_1(H^{(0)})),\\
+ H^a&=H^m+\operatorname{LocalMHA}_{8}(\operatorname{LN}_1(H^m)),\\
+ H^{(1)}&=H^a+\operatorname{FFN}_1(\operatorname{LN}_2(H^a)).
+\end{align}
+The two $\operatorname{LN}_1$ applications share parameters and act on different inputs. The second block is
+\begin{align}
+ G&=H^{(1)}+\operatorname{GlobalMHA}(\operatorname{LN}_3(H^{(1)})),\\
+ H^{(2)}&=G+\operatorname{FFN}_2(\operatorname{LN}_4(G)),
+\end{align}
+where $\operatorname{FFN}_b(x)=W_{2,b}\operatorname{GELU}(W_{1,b}x)$.
+
+For either attention operator, $q_t^{(h)}=W_Q^{(h)}a_t$, $k_t^{(h)}=W_K^{(h)}a_t$ and $v_t^{(h)}=W_V^{(h)}a_t\in\mathbb R^{16}$. With four heads,
+\begin{align}
+ A_{t,j}^{(h)}&=\operatorname{softmax}_{j}\left(q_t^{(h)\mathsf T}k_j^{(h)}/\sqrt{16}+M_{t,j}\right),\\
+ b_t^{(h)}&=\sum_j A_{t,j}^{(h)}v_j^{(h)},\qquad
+ \operatorname{MHA}(a)_t=W_A[b_t^{(1)};\ldots;b_t^{(4)}].
+\end{align}
+The mask is zero on $0\le j\le t$ for global attention, or $\max(0,t-7)\le j\le t$ for local attention, and $-\infty$ otherwise. Attention selects among stored positions using a query. The modal branch instead reads an accumulated finite state; convolution--recurrence equivalence does not imply equivalence to arbitrary attention.
+
+\section{Data, evaluation and evidence}\label{app:data}
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Normalized corpus sizes. PG is the Project Gutenberg ebook identifier. Final tests use each complete normalized book. The remaining 10\% of each development-source text is unused in this study.}
+\input{paper/tables/datasets.tex}
+\end{minipage}\end{center}
+
+The Gutenberg wrappers are removed; selected smart quotes, dashes, ellipses and nonbreaking spaces are mapped to ASCII equivalents, and remaining non-ASCII characters are discarded. The source works had informed the earlier project. The local protocol is not an independent preregistration. Primary model choices were fixed before the final books were fetched; the calibration rule was specified before primary final-score inspection. The local-only control and corrected fixed-window diagnostic are post hoc.
+
+For book $b$ and seed $s$, let $\ell_{b,s}$ be total next-character loss divided by the number of scored targets. Every target is counted once in reset-128 evaluation, so a book of $N$ characters contributes $N-1$ targets. We form $m_s=(\ell_{1,s}+\ell_{2,s})/2$ and report its seed mean and sample SD; reported aggregate PPL is $\exp(\operatorname{mean}_s m_s)$. Seed variability does not quantify uncertainty across books or tasks.
+
+The original continuation audit uses eight blocks/book and scores 128 targets after each prefix. Scored input positions run from prefix$-1$ to prefix$+126$. The corrective audit uses 64 evenly spaced single-target positions/book, beginning no earlier than position 8,192, and exactly 128, 512, 2,048 or 8,192 preceding characters. This distinguishes the input window from a prefix followed by growing continuation history. The diagnostic remains sparse and single-seed, and it does not isolate positional from history-length effects.
+
+Timing uses an Apple M1 with 8 GiB RAM, macOS 15.5, PyTorch 2.15.0, Python 3.13.3 and two threads. Inference records nine randomized/interleaved repetitions per model/seed after warmup, with 32 generated characters. Training timing records 20 repetitions after three warmup updates and excludes data sampling. Raw repetitions are retained. Optimized native full attention and unfused local/modal implementations are not equally engineered backends. The calibration median over 60 paired step-time ratios need not equal a ratio of displayed mean step times.
+
+Pre-training checks cover the sampler's last valid window, target shifts, document boundaries, future influence and gradients, cache growth, local attention against a dense reference, and spectral finite differences. Trained-model checks cover all 36 evaluated checkpoints, including 8k-prefix cache agreement; maximum long-prefix logit discrepancy is $6.2\times10^{-6}$. An exact-block audit found no training substring match among 7,669 nonoverlapping 128-character final-book blocks. It does not guarantee semantic deduplication or general correctness.
+
+Completed runs preserve full configurations, source copies, data hashes, checkpoints and raw measurements. JSON writes are atomic; incomplete runs restart. Run identifiers depend on configuration/code/data/environment records, and checkpoints are hash-verified before reuse. The companion experiment package runs through \texttt{experiments/rigorous/run\_all.py}, archiving old and new evidence around regeneration. The code, saved checkpoints, raw results and manuscript are available at \href{https://github.com/cerebrum101/modal-stripe}{github.com/cerebrum101/modal-stripe}.
+
+The frozen core hashes are:
+\begin{center}\small
+\begin{tabular}{ll}\toprule File & SHA-256\\\midrule
+\texttt{study.py} & \texttt{\scriptsize 77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540}\\
+\texttt{model.py} & \texttt{\scriptsize afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d}\\\bottomrule
+\end{tabular}\end{center}
+The source snapshots are Project Gutenberg ebooks \href{https://www.gutenberg.org/ebooks/1524}{1524}, \href{https://www.gutenberg.org/ebooks/11}{11}, \href{https://www.gutenberg.org/ebooks/2701}{2701}, \href{https://www.gutenberg.org/ebooks/84}{84} and \href{https://www.gutenberg.org/ebooks/1661}{1661}. The manuscript evidence manifest identifies the result JSONs and all 36 evaluated run directories.
+
+\section{Additional results}\label{app:results}
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Final-book reset-128 results. Models use approximately matched parameter counts and context-128 training. Loss is mean $\pm$ sample SD across three seeds. $\dagger$ marks the exploratory local-only control.}
+\label{tab:comparison}
+\input{paper/tables/comparison.tex}
+\end{minipage}\end{center}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{CPU inference for context-128-trained models. Prefill includes cache construction. Cache counts retained tensors, including reserved capacity, not weights or peak process memory.}
+\label{tab:timing}
+\input{paper/tables/timing.tex}
+\end{minipage}\end{center}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Fixed feed-forward width 256 in each block, context-128 training and 1,800 updates. Unlike parameter matching, this condition permits additional parameters in ModalStripe. Loss is mean $\pm$ sample SD over three seeds.}
+\input{paper/tables/fixedff.tex}
+\end{minipage}\end{center}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Per-book reset-128 PPL, geometric over three seeds. Calibrated attention uses 2,439 updates; other rows use 1,800. Local-only is exploratory.}
+\input{paper/tables/perbook.tex}
+\end{minipage}\end{center}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Corrective exact-window diagnostic, seed 0 and the same 64 target characters/book. The input history is exactly the named length. This is a post hoc diagnostic, not a broad long-context benchmark.}
+\input{paper/tables/exact.tex}
+\end{minipage}\end{center}
+
+\begin{figure}[htbp]
+\centering\resizebox{\textwidth}{!}{\input{figures/plots/context.tex}}
+\caption{Corrective exact-history diagnostic for all three primary architectures, seed 0, using the same 64 target positions per final book. Lower perplexity is better. Horizontal axes are logarithmic. This exploratory test has no uncertainty estimate; absolute positional indices change with history length.}
+\label{fig:contextcurves}
+\end{figure}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Original prefix-plus-continuation test, three seeds and eight 128-character target blocks/book. Input positions extend beyond the prefix, including in the 128-prefix row.}
+\input{paper/tables/continuation.tex}
+\end{minipage}\end{center}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Context-512-trained models tested with reset-128 windows on the complete final books. This evaluation context differs from training.}
+\input{paper/tables/longtrain.tex}
+\end{minipage}\end{center}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Development learning curves for approximately matched parameters and context-128 training. Values average three seeds and three source works. All checkpoints share the 1,800-update schedule; continued late improvement is not convergence.}
+\input{paper/tables/learning.tex}
+\end{minipage}\end{center}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Interleaved training-step timing: three warmup updates, then 20 repetitions per seed. Batch size is 16 at 128 and 4 at 512. Means of per-seed medians include forward, loss, backward, clipping and AdamW, but exclude data sampling.}
+\input{paper/tables/train_timing.tex}
+\end{minipage}\end{center}
+
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Separate exploratory local-only timing at prefix 8,192, seed 0, nine randomized paired repeats. These measurements were collected separately from Table~\ref{tab:timing}.}
+\input{paper/tables/localtiming.tex}
+\end{minipage}\end{center}
+
+For batch one, two full-attention blocks retain $16d(T+32)+4d$ bytes of tensor payload under the allocation policy. ModalStripe retains
+\[
+ 8d(T+32)+8wd+8Rd+4d,
+\]
+corresponding to one global KV cache, local KV state, complex modal state and the previous embedding. At $d=64,w=8,R=8$, the modal state is 4 KiB. Local plus global removes that state; two local blocks retain $16wd+4d=8,448$ bytes. These formulas exclude weights, workspaces, allocator overhead and process memory. The local-only model's bounded receptive field does not establish distant recall; the project's earlier recall runs trained separate models and are not evidence of retrieval ability in these text-trained checkpoints.
+\end{document}

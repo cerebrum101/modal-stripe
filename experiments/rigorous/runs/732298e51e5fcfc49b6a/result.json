@@ -1,0 +1,109 @@
+{
+  "config": {
+    "phase": "posthoc_local_pilot",
+    "kind": "localonly",
+    "budget": "parameters",
+    "seed": 0,
+    "lr": 0.0005,
+    "steps": 400,
+    "context": 128,
+    "batch": 16,
+    "controller_sha256": "97a36317605b61c50032904c23db05b546a04392770ea3cb9c1da69c402ac8e1",
+    "plan_sha256": "1c44d3ced21b49018ca8da10030022004b51ebb6ed0d00ed13c8bca8316838a6",
+    "posthoc": true,
+    "provenance": {
+      "code": {
+        "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+        "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+      },
+      "data": {
+        "hamlet": {
+          "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+          "characters": 178099,
+          "gutenberg": 1524
+        },
+        "alice": {
+          "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+          "characters": 144861,
+          "gutenberg": 11
+        },
+        "moby": {
+          "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+          "characters": 1220651,
+          "gutenberg": 2701
+        }
+      },
+      "torch": "2.15.0",
+      "python": "3.13.3",
+      "device": "cpu",
+      "threads": 2,
+      "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+    }
+  },
+  "steps": 400,
+  "tokens": 819200,
+  "train_seconds": 8.793036957242293,
+  "parameters": 120768,
+  "history": [
+    {
+      "step": 300,
+      "train_seconds": 6.380658580077579,
+      "dev": {
+        "hamlet": {
+          "nats": 2.581256846748629,
+          "ppl": 13.213735367734204,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 2.415282936873089,
+          "ppl": 11.192936804119375,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 2.357647583171821,
+          "ppl": 10.566066401492826,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 400,
+      "train_seconds": 8.793036957242293,
+      "dev": {
+        "hamlet": {
+          "nats": 2.547769830645794,
+          "ppl": 12.778573597687844,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 2.3858401624095578,
+          "ppl": 10.868189874807053,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 2.3315434133979935,
+          "ppl": 10.29381689368007,
+          "targets": 122064
+        }
+      }
+    }
+  ],
+  "dev": {
+    "hamlet": {
+      "nats": 2.547769830645794,
+      "ppl": 12.778573597687844,
+      "targets": 17809
+    },
+    "alice": {
+      "nats": 2.3858401624095578,
+      "ppl": 10.868189874807053,
+      "targets": 14485
+    },
+    "moby": {
+      "nats": 2.3315434133979935,
+      "ppl": 10.29381689368007,
+      "targets": 122064
+    }
+  },
+  "checkpoint_sha256": "a7f83bfca3b3abcc4963f368d2194c0015e6765b240dc2517ab0553259554da8"
+}

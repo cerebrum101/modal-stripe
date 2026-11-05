@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "full",
+    "budget": "parameters",
+    "causal": 0.0,
+    "cached": 7.152557373046875e-07
+  },
+  {
+    "kind": "full",
+    "budget": "fixed_ff",
+    "causal": 0.0,
+    "cached": 7.152557373046875e-07
+  },
+  {
+    "kind": "localglobal",
+    "budget": "parameters",
+    "causal": 0.0,
+    "cached": 1.3113021850585938e-06
+  },
+  {
+    "kind": "localglobal",
+    "budget": "fixed_ff",
+    "causal": 0.0,
+    "cached": 7.152557373046875e-07
+  },
+  {
+    "kind": "striped",
+    "budget": "parameters",
+    "causal": 4.76837158203125e-07,
+    "cached": 7.152557373046875e-07
+  },
+  {
+    "kind": "striped",
+    "budget": "fixed_ff",
+    "causal": 5.960464477539062e-07,
+    "cached": 8.344650268554688e-07
+  }
+]

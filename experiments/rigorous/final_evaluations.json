@@ -1,0 +1,4031 @@
+[
+  {
+    "run": "runs/30f44c7e880f2baf39e7",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.8130398196265118,
+        "ppl": 6.129050350695177,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.805160719358473,
+        "ppl": 6.080948696160283,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.333064764738083,
+          "ppl": 10.309489324419825,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.532799184322357,
+          "ppl": 12.588694941235017,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.5655405819416046,
+          "ppl": 13.00768819074022,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.3736481070518494,
+          "ppl": 10.736488787092988,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.4554679095745087,
+          "ppl": 11.651884301776153,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.5075372755527496,
+          "ppl": 12.274663692587948,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.6067559123039246,
+          "ppl": 13.555005819885173,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.466059982776642,
+          "ppl": 11.7759578512999,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/57a450edb6e8288d81b7",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7927871685984325,
+        "ppl": 6.0061693658059525,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7832313301157805,
+        "ppl": 5.949048733872272,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.0526103377342224,
+          "ppl": 7.788204439429887,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.3469730615615845,
+          "ppl": 10.453878538511127,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.534947007894516,
+          "ppl": 12.615762294516754,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.287273347377777,
+          "ppl": 9.848048831385977,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.0423491299152374,
+          "ppl": 7.708696675612984,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.3076425790786743,
+          "ppl": 10.050702967548672,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.485581487417221,
+          "ppl": 12.008100784600357,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.2583900690078735,
+          "ppl": 9.567673466950575,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/adc4231551e657e584e6",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.717766503363577,
+        "ppl": 5.572069357600872,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7214102082006668,
+        "ppl": 5.592409367664473,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.9444259852170944,
+          "ppl": 6.989618558917826,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.2611222863197327,
+          "ppl": 9.593850173973124,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.307486355304718,
+          "ppl": 10.049132931441843,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.21867898106575,
+          "ppl": 9.195175837753306,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.8766625821590424,
+          "ppl": 6.531669535215645,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.1467822939157486,
+          "ppl": 8.557279240686047,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.320205420255661,
+          "ppl": 10.177764810399427,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.1863816380500793,
+          "ppl": 8.90294070139691,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/d05e15713b62f8c36aae",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.8050579208670448,
+        "ppl": 6.080323615937067,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7932979123105148,
+        "ppl": 6.009237762558712,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.420429229736328,
+          "ppl": 11.250687408216844,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.479046791791916,
+          "ppl": 11.929887329819394,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.7881122827529907,
+          "ppl": 16.250314830179967,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.7717203199863434,
+          "ppl": 15.986111595178812,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.454118311405182,
+          "ppl": 11.63616954674084,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.486059248447418,
+          "ppl": 12.013839157878333,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.7804813385009766,
+          "ppl": 16.126781520989322,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.877780497074127,
+          "ppl": 17.77477819399914,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/dc0ebe0511ac565ea4cf",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7906061410392338,
+        "ppl": 5.99308401983113,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.783742653153195,
+        "ppl": 5.952091397366281,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.1188585311174393,
+          "ppl": 8.321633178957464,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.138147845864296,
+          "ppl": 8.483709929888118,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.5743150115013123,
+          "ppl": 13.122325437228236,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.678376942873001,
+          "ppl": 14.561440056730662,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.091349706053734,
+          "ppl": 8.095834790731498,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.124917507171631,
+          "ppl": 8.372206812620103,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.607301354408264,
+          "ppl": 13.56240130750572,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.721607953310013,
+          "ppl": 15.204751129344054,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/7bce15caff15fad17db8",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7207044070310675,
+        "ppl": 5.588463631208399,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7246582621650908,
+        "ppl": 5.610603346599184,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.0251670330762863,
+          "ppl": 7.5773765114470315,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.1832014322280884,
+          "ppl": 8.87467249073425,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.3493560552597046,
+          "ppl": 10.478819770786252,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.325899302959442,
+          "ppl": 10.235881106089703,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.007829114794731,
+          "ppl": 7.447132915735301,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.101405054330826,
+          "ppl": 8.177651889481302,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.296063929796219,
+          "ppl": 9.935000534427893,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.3169616758823395,
+          "ppl": 10.144804229812209,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/619e60ff5815c1dd7ea3",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7972234529154558,
+        "ppl": 6.032873630828566,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.783671317206546,
+        "ppl": 5.9516668144361,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.6457889080047607,
+          "ppl": 14.094560009435796,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.598088502883911,
+          "ppl": 13.438026719957,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.8360819816589355,
+          "ppl": 17.04883685337302,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.8103297352790833,
+          "ppl": 16.615395997864997,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.639093518257141,
+          "ppl": 14.00050665015379,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.5937627255916595,
+          "ppl": 13.38002235654798,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.8188334107398987,
+          "ppl": 16.75729038995334,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.941817134618759,
+          "ppl": 18.95025020021334,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/5a07d306986c25f008a1",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7892858171517128,
+        "ppl": 5.985176429278922,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7745404950986021,
+        "ppl": 5.89757055102856,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.324636161327362,
+          "ppl": 10.222959900897697,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.185373544692993,
+          "ppl": 8.89397022831415,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.555486500263214,
+          "ppl": 12.877563071646211,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.3812196254730225,
+          "ppl": 10.8180888380381,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.2760318517684937,
+          "ppl": 9.737961963524038,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.1549734473228455,
+          "ppl": 8.627661088427802,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.4805127680301666,
+          "ppl": 11.947389086615315,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.4370150566101074,
+          "ppl": 11.438845426598878,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/2ebf3439133f5a9e1906",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.723530696797337,
+        "ppl": 5.6042805899039925,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.719832846460149,
+        "ppl": 5.583595068587221,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.0858668088912964,
+          "ppl": 8.051567628176972,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.9772724509239197,
+          "ppl": 7.223014965025684,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.286298990249634,
+          "ppl": 9.838457988020885,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.111183911561966,
+          "ppl": 8.258012255690936,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.9999608099460602,
+          "ppl": 7.388766527097774,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.9044003039598465,
+          "ppl": 6.7153792335152085,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.1711203306913376,
+          "ppl": 8.768101713648386,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.090314105153084,
+          "ppl": 8.087455076699317,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/e98ec644070dda2aa216",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "fixed_ff",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.8084882560872664,
+        "ppl": 6.101216979319273,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7983754647901427,
+        "ppl": 6.039827577635347,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.313888520002365,
+          "ppl": 10.113675521228117,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.4632915556430817,
+          "ppl": 11.743402055028387,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.5575837790966034,
+          "ppl": 12.904599253397807,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.4559077322483063,
+          "ppl": 11.657010191843247,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.487302303314209,
+          "ppl": 12.028782304763945,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.497609555721283,
+          "ppl": 12.15340716674541,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.5998177528381348,
+          "ppl": 13.461284530535618,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.4984549582004547,
+          "ppl": 12.163686031571267,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/070e1a6e7647efb4c834",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "fixed_ff",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7898112729734497,
+        "ppl": 5.988322201487589,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7845886574186385,
+        "ppl": 5.95712902270256,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.0380892604589462,
+          "ppl": 7.675928477771582,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.3139449656009674,
+          "ppl": 10.114246409808905,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.6073092818260193,
+          "ppl": 13.562508822752807,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.156022220849991,
+          "ppl": 8.636714297531729,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.0251462757587433,
+          "ppl": 7.577219227069047,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.2610328793525696,
+          "ppl": 9.592992455269236,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.6391497254371643,
+          "ppl": 14.001293601267436,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.1601195633411407,
+          "ppl": 8.67217447063452,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/5dc38c04bca745bed01e",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "fixed_ff",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7043960749041724,
+        "ppl": 5.498064245391188,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7064010879879477,
+        "ppl": 5.509098994850443,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.9145621210336685,
+          "ppl": 6.783967589816367,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.115689769387245,
+          "ppl": 8.295305641084179,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.3176269233226776,
+          "ppl": 10.151555280169333,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.074717253446579,
+          "ppl": 7.962294829309191,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.886106714606285,
+          "ppl": 6.593647691706789,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.0072138011455536,
+          "ppl": 7.4425520026987,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.243880957365036,
+          "ppl": 9.429857237667148,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.007827013731003,
+          "ppl": 7.4471172688508895,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/aeee6b7b4122a83a1e0d",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "fixed_ff",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.8154711599317324,
+        "ppl": 6.143970288218446,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.801835431625085,
+        "ppl": 6.060761374981159,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.45323982834816,
+          "ppl": 11.625951857635883,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.497607499361038,
+          "ppl": 12.153382174987769,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.9301320612430573,
+          "ppl": 18.73010385414956,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.8390959203243256,
+          "ppl": 17.10029851415421,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.5151857435703278,
+          "ppl": 12.368906010521048,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.4982012808322906,
+          "ppl": 12.160600771058533,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.9301701188087463,
+          "ppl": 18.730816689871663,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.976649135351181,
+          "ppl": 19.621955842896753,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/f8a2367a61770e3491f4",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "fixed_ff",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7893973966010774,
+        "ppl": 5.9858442892282815,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7802835855820296,
+        "ppl": 5.931538278839351,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.094975471496582,
+          "ppl": 8.125241667750322,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.279124289751053,
+          "ppl": 9.768122617913404,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.5134977102279663,
+          "ppl": 12.348044497185459,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.49250590801239,
+          "ppl": 12.091538470410994,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.0609938502311707,
+          "ppl": 7.853771405394565,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.269839107990265,
+          "ppl": 9.677843601097754,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.5210148990154266,
+          "ppl": 12.441216837112139,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.579270303249359,
+          "ppl": 13.187511763427658,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/b15b89da01c83900f637",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "fixed_ff",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.71129355535241,
+        "ppl": 5.536118123097256,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7084393498203625,
+        "ppl": 5.520339432648769,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.973723664879799,
+          "ppl": 7.197427459466472,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.1760583221912384,
+          "ppl": 8.811505601198744,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.234849363565445,
+          "ppl": 9.345074037531537,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.277173399925232,
+          "ppl": 9.749084663394791,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.9281033724546432,
+          "ppl": 6.876455790312311,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.0989785194396973,
+          "ppl": 8.157832587682426,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.146330252289772,
+          "ppl": 8.553411868436626,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.2915644347667694,
+          "ppl": 9.890398467543852,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/e98138598efcdd6ff363",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "fixed_ff",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7991794060963635,
+        "ppl": 6.044685196866203,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7853707700516723,
+        "ppl": 5.961789991031342,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.52408030629158,
+          "ppl": 12.479412746828919,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.465424031019211,
+          "ppl": 11.768471291006838,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.737392544746399,
+          "ppl": 15.4466560765944,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.568104922771454,
+          "ppl": 13.041087141514067,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.5742755830287933,
+          "ppl": 13.121808054180228,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.4676603972911835,
+          "ppl": 11.794819354253425,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.7225555777549744,
+          "ppl": 15.219166352223837,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.6503778100013733,
+          "ppl": 14.15938719303963,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/c1a4e1779cd22b9d64be",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "fixed_ff",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7871157524133408,
+        "ppl": 5.972202291407824,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.774521642965128,
+        "ppl": 5.897459370289359,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.216002255678177,
+          "ppl": 9.170595788841712,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.134517252445221,
+          "ppl": 8.452964873618216,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.4598198235034943,
+          "ppl": 11.702702798023894,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.3965227901935577,
+          "ppl": 10.984913047005616,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.1925477385520935,
+          "ppl": 8.958006725373178,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.1597467958927155,
+          "ppl": 8.668942368733418,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.4954578578472137,
+          "ppl": 12.127284820159277,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.45364049077034,
+          "ppl": 11.630610872951168,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/29aac15548ee77c6b359",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "fixed_ff",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7032964930467105,
+        "ppl": 5.492021996278344,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.702234196983137,
+        "ppl": 5.486190940632716,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.1164015978574753,
+          "ppl": 8.301212577922248,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.0037727057933807,
+          "ppl": 7.416985485234167,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.323178678750992,
+          "ppl": 10.208070967779166,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.2802456617355347,
+          "ppl": 9.779082460840044,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.0167177617549896,
+          "ppl": 7.513622916390663,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.9647329151630402,
+          "ppl": 7.133007217651955,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.247814640402794,
+          "ppl": 9.467024361046272,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.2777399122714996,
+          "ppl": 9.754609204934157,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/3410bc7eaaf75ca5a918",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 2.0220726960736974,
+        "ppl": 7.553965793929494,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 2.0007874170424693,
+        "ppl": 7.394876658934041,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.0039766877889633,
+          "ppl": 7.418498571050537,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.06869775056839,
+          "ppl": 7.914509738202548,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.3081062138080597,
+          "ppl": 10.055363902901423,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.2155224680900574,
+          "ppl": 9.166196906155607,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.957399606704712,
+          "ppl": 7.0808900048486985,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.0664195120334625,
+          "ppl": 7.896499121162953,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.336124449968338,
+          "ppl": 10.341081422929587,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.2499282360076904,
+          "ppl": 9.4870549829876,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/6e7863449a21e5b012e0",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.8396446819347803,
+        "ppl": 6.294301384658993,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.8273875108609237,
+        "ppl": 6.217621952269995,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.8254793286323547,
+          "ppl": 6.205768909036507,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.997329831123352,
+          "ppl": 7.369352389130772,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.704233705997467,
+          "ppl": 14.9428616768488,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.173131912946701,
+          "ppl": 8.785757223270185,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.7756322026252747,
+          "ppl": 5.904012488904427,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.9314247816801071,
+          "ppl": 6.899333285743357,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.6753577291965485,
+          "ppl": 14.517542259523793,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.1209048330783844,
+          "ppl": 8.338679187942502,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/c77a30b6062a89dfde29",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7554068502294833,
+        "ppl": 5.785801217721408,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.752757567590915,
+        "ppl": 5.770493281483427,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.7274381965398788,
+          "ppl": 5.62622215527871,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.8321097493171692,
+          "ppl": 6.247052480053872,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.28341343998909,
+          "ppl": 9.810109543111537,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.0107020437717438,
+          "ppl": 7.4685587624155625,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.6745952367782593,
+          "ppl": 5.336634638425545,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.7719188928604126,
+          "ppl": 5.882129715579966,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.219494491815567,
+          "ppl": 9.202677660988433,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 1.926259696483612,
+          "ppl": 6.863789513848504,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/3910703148efdfbf9e17",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 2.0144974202429524,
+        "ppl": 7.496958614590269,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.9942454750915797,
+        "ppl": 7.346657699881626,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.991011142730713,
+          "ppl": 7.322934552091452,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.120577335357666,
+          "ppl": 8.33594873664734,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.3127743005752563,
+          "ppl": 10.102412943139738,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.289457142353058,
+          "ppl": 9.869578450521162,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.953525424003601,
+          "ppl": 7.053510414297164,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.0910504162311554,
+          "ppl": 8.093412152326948,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.302498698234558,
+          "ppl": 9.999136089724322,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.344783842563629,
+          "ppl": 10.43101774178792,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/70d66c780accb44bcc02",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.8149291104661112,
+        "ppl": 6.140640854847235,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.806876249754008,
+        "ppl": 6.091389701852852,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.8022968024015427,
+          "ppl": 6.063558278317777,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.0005904734134674,
+          "ppl": 7.3934204284911695,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.5423746407032013,
+          "ppl": 12.709816411754291,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.6782875061035156,
+          "ppl": 14.560137786809207,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.7424194067716599,
+          "ppl": 5.711144302167942,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.9042669832706451,
+          "ppl": 6.7144839942058345,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.426115244626999,
+          "ppl": 11.314841201216382,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.6417546570301056,
+          "ppl": 14.037813558655786,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/4ee1b65908f302d34490",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7494184087890468,
+        "ppl": 5.75125682272058,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.74878395664767,
+        "ppl": 5.747609082794361,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.7404140830039978,
+          "ppl": 5.699703084265422,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.8515472412109375,
+          "ppl": 6.369667313951035,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.2690320909023285,
+          "ppl": 9.670036566566141,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.380971133708954,
+          "ppl": 10.815400966029744,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.6830840855836868,
+          "ppl": 5.382129348661762,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.8090283572673798,
+          "ppl": 6.104513143860983,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.160092353820801,
+          "ppl": 8.671938508137098,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.3234225809574127,
+          "ppl": 10.21056104246652,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/e972d8b79ef8ebf1d8c0",
+    "config": {
+      "phase": "main",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 2.007335033322342,
+        "ppl": 7.443454334173548,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.991658045640293,
+        "ppl": 7.327673312353508,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.992270514369011,
+          "ppl": 7.332162657763087,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.1166232228279114,
+          "ppl": 8.30305253779741,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.2571609914302826,
+          "ppl": 9.55592127767823,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.2879628241062164,
+          "ppl": 9.854841173187475,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.959936574101448,
+          "ppl": 7.098876798237854,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.0543758422136307,
+          "ppl": 7.801966694340841,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.2460509836673737,
+          "ppl": 9.450342494634612,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.3334235548973083,
+          "ppl": 10.313188931387666,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/346417e6a8d41eab70fb",
+    "config": {
+      "phase": "main",
+      "kind": "localglobal",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.8216360463184478,
+        "ppl": 6.181964160629778,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.816035944882665,
+        "ppl": 6.147441290268805,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.7942428141832352,
+          "ppl": 6.014918586061887,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.9546943604946136,
+          "ppl": 7.061760340890895,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.185853660106659,
+          "ppl": 8.898241385751662,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.1642366349697113,
+          "ppl": 8.70795203296236,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.7416281551122665,
+          "ppl": 5.706627137104668,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.88307224214077,
+          "ppl": 6.573669775886492,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.1516923904418945,
+          "ppl": 8.599399630725898,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.1815492063760757,
+          "ppl": 8.860021634011916,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/56b3d66049cb8fb25e35",
+    "config": {
+      "phase": "main",
+      "kind": "striped",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 512,
+      "batch": 4,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7501597319760065,
+        "ppl": 5.755521943478551,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7484229364447732,
+        "ppl": 5.74553445431105,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.7372588813304901,
+          "ppl": 5.681747712860323,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.8513545244932175,
+          "ppl": 6.368439890849596,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 1.9460355341434479,
+          "ppl": 7.000877750644213,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.060882017016411,
+          "ppl": 7.852893142000736,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.6684727221727371,
+          "ppl": 5.304060833458646,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 1.7469876259565353,
+          "ppl": 5.7372937438520575,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 1.8958014994859695,
+          "ppl": 6.657882556133861,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.040402889251709,
+          "ppl": 7.693708286917031,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/c9df2d89dcd8d1271159",
+    "config": {
+      "phase": "equal_time",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "seconds": 85.30929763324093,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.651081715124713,
+        "ppl": 5.212615343475077,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.6504144399010943,
+        "ppl": 5.209138254622759,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.588150441646576,
+          "ppl": 13.305140198409815,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.791034996509552,
+          "ppl": 16.297879323723386,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.891898274421692,
+          "ppl": 18.027498280409397,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.6790671646595,
+          "ppl": 14.571494149278324,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.692547023296356,
+          "ppl": 14.769245667406082,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.789517045021057,
+          "ppl": 16.273158700644654,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.874938189983368,
+          "ppl": 17.724328546560983,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.7537823021411896,
+          "ppl": 15.70190907571446,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/396204db6e448c88fa4c",
+    "config": {
+      "phase": "equal_time",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "seconds": 88.24513848681818,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.6373090516734528,
+        "ppl": 5.141315865546107,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.6401297638338281,
+        "ppl": 5.155838510199554,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.6782227754592896,
+          "ppl": 14.559195330213486,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.781712681055069,
+          "ppl": 16.14665134410548,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 3.362997680902481,
+          "ppl": 28.875621167428886,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 3.2790240049362183,
+          "ppl": 26.549847530379378,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.7840963304042816,
+          "ppl": 16.185185206436667,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.811124622821808,
+          "ppl": 16.62860861973971,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 3.325185090303421,
+          "ppl": 27.804144443967505,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 3.429117888212204,
+          "ppl": 30.849418108493776,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/1a88b2169bc455bf586d",
+    "config": {
+      "phase": "equal_time",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "seconds": 82.37739136393066,
+      "context": 128,
+      "batch": 16,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.6490778895795146,
+        "ppl": 5.2021806298569375,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.6549608062927734,
+        "ppl": 5.232874822395042,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.898847311735153,
+          "ppl": 18.15320831461902,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.8829524517059326,
+          "ppl": 17.8669466805724,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 3.258683681488037,
+          "ppl": 26.015270212594526,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 3.045613795518875,
+          "ppl": 21.022931024404592,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.8457295894622803,
+          "ppl": 17.214113324180268,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.871675282716751,
+          "ppl": 17.666589955211602,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 3.1933185160160065,
+          "ppl": 24.369162865372136,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 3.171865165233612,
+          "ppl": 23.85193068553881,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/3cf096ba9be1b4429b66",
+    "config": {
+      "phase": "calibrated_time",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 2439,
+      "context": 128,
+      "batch": 16,
+      "calibration": {
+        "steps": 2439,
+        "median_time_ratio": 1.3545903331181763,
+        "training_timing_sha256": "d56cee50300c2e45d4ec3e7f07350a204ecb9e48a858e789838ac76567c72db7",
+        "controller_sha256": "e0ea23d64a3bab89c21bb5f8030dcf4dd1178a6f1f30af06743029e617f9b987",
+        "plan_sha256": "c1cb8219ebbd284d2f263fb6f45d2ab28593d9115a729e456d6e90e96b6f0802",
+        "rule": "ceil(1800 * median paired striped/full step-ms ratio), context128"
+      },
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7475973652580516,
+        "ppl": 5.740793064060142,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.742001943640271,
+        "ppl": 5.708760607570669,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.4375037848949432,
+          "ppl": 11.444437280241939,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.6458424627780914,
+          "ppl": 14.095314860615058,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.7018505930900574,
+          "ppl": 14.907293548579139,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.4836281538009644,
+          "ppl": 11.9846678512893,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.519280344247818,
+          "ppl": 12.419655570137598,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.5936121344566345,
+          "ppl": 13.378007595501032,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.7127809524536133,
+          "ppl": 15.071129385332638,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.6107929944992065,
+          "ppl": 13.609839101296759,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/86cb9bcbe37564e3ba0e",
+    "config": {
+      "phase": "calibrated_time",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 2439,
+      "context": 128,
+      "batch": 16,
+      "calibration": {
+        "steps": 2439,
+        "median_time_ratio": 1.3545903331181763,
+        "training_timing_sha256": "d56cee50300c2e45d4ec3e7f07350a204ecb9e48a858e789838ac76567c72db7",
+        "controller_sha256": "e0ea23d64a3bab89c21bb5f8030dcf4dd1178a6f1f30af06743029e617f9b987",
+        "plan_sha256": "c1cb8219ebbd284d2f263fb6f45d2ab28593d9115a729e456d6e90e96b6f0802",
+        "rule": "ceil(1800 * median paired striped/full step-ms ratio), context128"
+      },
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7467004484651776,
+        "ppl": 5.735646358784792,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7357741665333786,
+        "ppl": 5.673318197219374,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.51203453540802,
+          "ppl": 12.329990360801457,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.601812094449997,
+          "ppl": 13.488157718675543,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.888865202665329,
+          "ppl": 17.972902422968467,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.898774117231369,
+          "ppl": 18.151879648170475,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.5573172569274902,
+          "ppl": 12.901160349905622,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.595398038625717,
+          "ppl": 13.401920782013768,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.8756363689899445,
+          "ppl": 17.736707621560146,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 3.0287217795848846,
+          "ppl": 20.670793865015714,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/aaa2b714ea6d8b6ee3db",
+    "config": {
+      "phase": "calibrated_time",
+      "kind": "full",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 2439,
+      "context": 128,
+      "batch": 16,
+      "calibration": {
+        "steps": 2439,
+        "median_time_ratio": 1.3545903331181763,
+        "training_timing_sha256": "d56cee50300c2e45d4ec3e7f07350a204ecb9e48a858e789838ac76567c72db7",
+        "controller_sha256": "e0ea23d64a3bab89c21bb5f8030dcf4dd1178a6f1f30af06743029e617f9b987",
+        "plan_sha256": "c1cb8219ebbd284d2f263fb6f45d2ab28593d9115a729e456d6e90e96b6f0802",
+        "rule": "ceil(1800 * median paired striped/full step-ms ratio), context128"
+      },
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7396664395299548,
+        "ppl": 5.6954433310372625,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7319891841280355,
+        "ppl": 5.651885374678469,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.7562845647335052,
+          "ppl": 15.741248573773335,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.716896414756775,
+          "ppl": 15.133281855534966,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 3.028680592775345,
+          "ppl": 20.669942518498,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.9126350581645966,
+          "ppl": 18.405233585477383,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.6971924006938934,
+          "ppl": 14.838013991150882,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.679723024368286,
+          "ppl": 14.581054139851275,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.9666788578033447,
+          "ppl": 19.427291538255677,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 3.0270028710365295,
+          "ppl": 20.635293180695726,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/72d385066a5d1d448138",
+    "config": {
+      "phase": "posthoc_local",
+      "kind": "localonly",
+      "budget": "parameters",
+      "seed": 0,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "controller_sha256": "97a36317605b61c50032904c23db05b546a04392770ea3cb9c1da69c402ac8e1",
+      "plan_sha256": "1c44d3ced21b49018ca8da10030022004b51ebb6ed0d00ed13c8bca8316838a6",
+      "posthoc": true,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7710839109863612,
+        "ppl": 5.877220293810967,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7683319827383004,
+        "ppl": 5.861068839279398,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.9744322448968887,
+          "ppl": 7.202529220028037,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.2377880811691284,
+          "ppl": 9.372576962985875,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.2100207805633545,
+          "ppl": 9.115905824730575,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.384876012802124,
+          "ppl": 10.85771636363292,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.8922033607959747,
+          "ppl": 6.633969618148141,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.1835481971502304,
+          "ppl": 8.877750449482756,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.210447445511818,
+          "ppl": 9.119796092080824,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.381906569004059,
+          "ppl": 10.825522807249762,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/ca0bde6ff10e8bac455b",
+    "config": {
+      "phase": "posthoc_local",
+      "kind": "localonly",
+      "budget": "parameters",
+      "seed": 1,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "controller_sha256": "97a36317605b61c50032904c23db05b546a04392770ea3cb9c1da69c402ac8e1",
+      "plan_sha256": "1c44d3ced21b49018ca8da10030022004b51ebb6ed0d00ed13c8bca8316838a6",
+      "posthoc": true,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7712673995728516,
+        "ppl": 5.87829879559853,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7641550524691474,
+        "ppl": 5.836638620613911,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 1.9866223633289337,
+          "ppl": 7.290866229638513,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.1426128447055817,
+          "ppl": 8.521674377429754,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.48193222284317,
+          "ppl": 11.964359907364258,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.513158857822418,
+          "ppl": 12.343861041430824,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 1.909724861383438,
+          "ppl": 6.751231018606958,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.0519128292798996,
+          "ppl": 7.782773995099973,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.450579732656479,
+          "ppl": 11.595066809990946,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.556292235851288,
+          "ppl": 12.887943163743934,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  },
+  {
+    "run": "runs/12d5be8b26b75f9ead57",
+    "config": {
+      "phase": "posthoc_local",
+      "kind": "localonly",
+      "budget": "parameters",
+      "seed": 2,
+      "lr": 0.002,
+      "steps": 1800,
+      "context": 128,
+      "batch": 16,
+      "controller_sha256": "97a36317605b61c50032904c23db05b546a04392770ea3cb9c1da69c402ac8e1",
+      "plan_sha256": "1c44d3ced21b49018ca8da10030022004b51ebb6ed0d00ed13c8bca8316838a6",
+      "posthoc": true,
+      "provenance": {
+        "code": {
+          "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+          "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+        },
+        "data": {
+          "hamlet": {
+            "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+            "characters": 178099,
+            "gutenberg": 1524
+          },
+          "alice": {
+            "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+            "characters": 144861,
+            "gutenberg": 11
+          },
+          "moby": {
+            "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+            "characters": 1220651,
+            "gutenberg": 2701
+          }
+        },
+        "torch": "2.15.0",
+        "python": "3.13.3",
+        "device": "cpu",
+        "threads": 2,
+        "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+      }
+    },
+    "test": {
+      "frankenstein": {
+        "nats": 1.7691333826813527,
+        "ppl": 5.8657677821282,
+        "targets": 419428
+      },
+      "sherlock": {
+        "nats": 1.7614184911487596,
+        "ppl": 5.820688135817647,
+        "targets": 562331
+      }
+    },
+    "long_test": {
+      "frankenstein": {
+        "128": {
+          "nats": 2.1163585484027863,
+          "ppl": 8.300855222939536,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.224480390548706,
+          "ppl": 9.248675855760595,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.5618070363998413,
+          "ppl": 12.959213941204489,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.46338614821434,
+          "ppl": 11.744512946164292,
+          "targets": 1024
+        }
+      },
+      "sherlock": {
+        "128": {
+          "nats": 2.0651212632656097,
+          "ppl": 7.886254152606403,
+          "targets": 1024
+        },
+        "512": {
+          "nats": 2.19479638338089,
+          "ppl": 8.978172765506141,
+          "targets": 1024
+        },
+        "2048": {
+          "nats": 2.549070954322815,
+          "ppl": 12.795210923616551,
+          "targets": 1024
+        },
+        "8192": {
+          "nats": 2.50885209441185,
+          "ppl": 12.290813266455674,
+          "targets": 1024
+        }
+      }
+    },
+    "test_metadata": {
+      "frankenstein": {
+        "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+        "characters": 419429,
+        "gutenberg": 84
+      },
+      "sherlock": {
+        "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+        "characters": 562332,
+        "gutenberg": 1661
+      }
+    }
+  }
+]

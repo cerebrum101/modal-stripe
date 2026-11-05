@@ -1,0 +1,12 @@
+{
+  "source_files": {
+    "run.py": "6e952142221cb79356b6826dc7139536b09d2f9f2a3e657f5ee863cd522e07d7",
+    "branches.py": "7c1e8c935b5f5fa15ae4b90e0a995fef03d6543a1b9420421da393f32948003a",
+    "suite.py": "0a9493fd12c2b43266906f22b3767a3dfe921d3e3ddd59ab6f1eb538179088b2",
+    "summarize.py": "590e9c689fd85e020d882d2d799e0eb3eda316f72fe2fe6a912ff7578a935a87",
+    "diagnose.py": "69f4258735142b24b2b6fe82218a74bf6bbefa404713b22ae8ae5a99db54bd45"
+  },
+  "records": 30,
+  "data_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+  "review": "Inspect final PNG and grayscale renders; verify report values against summary.json before delivery."
+}

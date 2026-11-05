@@ -1,0 +1,3 @@
+# Optional raster previews / legacy plots. TikZ manuscript compilation does not need these.
+matplotlib==3.11.2
+pillow==13.0.0

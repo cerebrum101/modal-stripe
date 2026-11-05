@@ -1,0 +1,169 @@
+{
+  "config": {
+    "phase": "equal_time",
+    "kind": "full",
+    "budget": "parameters",
+    "seed": 2,
+    "lr": 0.002,
+    "seconds": 82.37739136393066,
+    "context": 128,
+    "batch": 16,
+    "provenance": {
+      "code": {
+        "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+        "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+      },
+      "data": {
+        "hamlet": {
+          "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+          "characters": 178099,
+          "gutenberg": 1524
+        },
+        "alice": {
+          "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+          "characters": 144861,
+          "gutenberg": 11
+        },
+        "moby": {
+          "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+          "characters": 1220651,
+          "gutenberg": 2701
+        }
+      },
+      "torch": "2.15.0",
+      "python": "3.13.3",
+      "device": "cpu",
+      "threads": 2,
+      "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+    }
+  },
+  "steps": 4146,
+  "tokens": 8491008,
+  "train_seconds": 82.38636804796988,
+  "parameters": 120768,
+  "history": [
+    {
+      "step": 300,
+      "train_seconds": 5.563595539162634,
+      "dev": {
+        "hamlet": {
+          "nats": 2.2396798845799113,
+          "ppl": 9.39032481848588,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 2.118119517580822,
+          "ppl": 8.315485651224341,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 2.135189693554433,
+          "ppl": 8.458650906240745,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 600,
+      "train_seconds": 11.32903241479653,
+      "dev": {
+        "hamlet": {
+          "nats": 2.091550818137045,
+          "ppl": 8.097463124665731,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.947522518064468,
+          "ppl": 7.0112956870247825,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.9883320200004182,
+          "ppl": 7.303341769134824,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 1200,
+      "train_seconds": 23.111713174148463,
+      "dev": {
+        "hamlet": {
+          "nats": 1.9612399952757986,
+          "ppl": 7.108135657356468,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.7843815148761448,
+          "ppl": 5.955895175646355,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.8444564335310907,
+          "ppl": 6.324660982239171,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 1800,
+      "train_seconds": 34.943318383942824,
+      "dev": {
+        "hamlet": {
+          "nats": 1.8746106246673209,
+          "ppl": 6.518280568472604,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.6918182652203182,
+          "ppl": 5.429343722482907,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.7690622526222075,
+          "ppl": 5.865350564557456,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 4146,
+      "train_seconds": 82.38636804796988,
+      "dev": {
+        "hamlet": {
+          "nats": 1.8043742797035887,
+          "ppl": 6.0761682769683,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.5889049073108361,
+          "ppl": 4.898381808009194,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.6613362896472101,
+          "ppl": 5.266343504868949,
+          "targets": 122064
+        }
+      }
+    }
+  ],
+  "dev": {
+    "hamlet": {
+      "nats": 1.8043742797035887,
+      "ppl": 6.0761682769683,
+      "targets": 17809
+    },
+    "alice": {
+      "nats": 1.5889049073108361,
+      "ppl": 4.898381808009194,
+      "targets": 14485
+    },
+    "moby": {
+      "nats": 1.6613362896472101,
+      "ppl": 5.266343504868949,
+      "targets": 122064
+    }
+  },
+  "checkpoint_sha256": "4a81ac2045569a383a9267fed6f351f7f9f4bfaa6bb13b61a17abe44fa7d2f50"
+}

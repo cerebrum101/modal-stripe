@@ -1,0 +1,63 @@
+{
+  "corpus": "hamlet",
+  "kind": "hybrid",
+  "seed": 1,
+  "steps": 600,
+  "training_tokens": 1228800,
+  "trainable_parameters": 114530,
+  "train_seconds": 33.60801083300612,
+  "history": [
+    {
+      "step": 300,
+      "train_loss": 1.9502060413360596,
+      "train_seconds": 16.310836832999485
+    },
+    {
+      "step": 600,
+      "train_loss": 1.7676913738250732,
+      "train_seconds": 33.60796316701453
+    }
+  ],
+  "validation": {
+    "hamlet": {
+      "loss_nats": 1.9143021559715272,
+      "perplexity": 6.782204224476937,
+      "evaluated_characters": 102400
+    }
+  },
+  "decode": {
+    "128": {
+      "prefill_ms_median": 5.452915997011587,
+      "decode_ms_per_token_median": 0.8564036252209917,
+      "cache_bytes": 16640,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "512": {
+      "prefill_ms_median": 17.12162501644343,
+      "decode_ms_per_token_median": 0.9740833438627305,
+      "cache_bytes": 16640,
+      "repeats": 5,
+      "continuation_tokens": 32
+    }
+  },
+  "source_metadata": [
+    {
+      "url": "https://www.gutenberg.org/cache/epub/1524/pg1524.txt",
+      "sha256_raw": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+      "raw_bytes": 206895,
+      "normalized_characters": 178099,
+      "normalization": "strip Gutenberg wrapper; map smart quotes/dashes; ASCII",
+      "name": "hamlet"
+    }
+  ],
+  "environment": {
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "input_gradcheck": true,
+  "parameter_gradient_absolute_errors": {
+    "log_decay": 1.4939059375402436e-12,
+    "omega": 1.0976913822347e-12,
+    "residue": 8.220576996897933e-13
+  },
+  "local_attention_dense_reference_error": 5.960464477539063e-08,
+  "full": {
+    "future_perturbation": 0.0,
+    "prefix_error": 0.0,
+    "future_gradient": 0.0,
+    "streamed_logits_error": 5.960464477539062e-07,
+    "prefill_decode_error": 4.76837158203125e-07,
+    "cache_growth_logits_error": 8.344650268554688e-07,
+    "parameters": 109568
+  },
+  "local": {
+    "future_perturbation": 0.0,
+    "prefix_error": 0.0,
+    "future_gradient": 0.0,
+    "streamed_logits_error": 4.76837158203125e-07,
+    "prefill_decode_error": 5.364418029785156e-07,
+    "cache_growth_logits_error": null,
+    "parameters": 109568
+  },
+  "spectral": {
+    "future_perturbation": 4.76837158203125e-07,
+    "prefix_error": 3.5762786865234375e-07,
+    "future_gradient": 2.5493772426443684e-08,
+    "streamed_logits_error": 5.960464477539062e-07,
+    "prefill_decode_error": 5.960464477539062e-07,
+    "cache_growth_logits_error": null,
+    "parameters": 109344
+  },
+  "hybrid": {
+    "future_perturbation": 4.76837158203125e-07,
+    "prefix_error": 4.76837158203125e-07,
+    "future_gradient": 2.9941730872451444e-08,
+    "streamed_logits_error": 8.344650268554688e-07,
+    "prefill_decode_error": 5.960464477539062e-07,
+    "cache_growth_logits_error": null,
+    "parameters": 109344
+  },
+  "striped": {
+    "future_perturbation": 8.344650268554688e-07,
+    "prefix_error": 3.5762786865234375e-07,
+    "future_gradient": 2.230202511555035e-08,
+    "streamed_logits_error": 5.960464477539062e-07,
+    "prefill_decode_error": 4.76837158203125e-07,
+    "cache_growth_logits_error": 7.152557373046875e-07,
+    "parameters": 109456
+  },
+  "float32_fft_vs_recurrence": 1.7881393432617188e-07,
+  "environment": {
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  }
+}

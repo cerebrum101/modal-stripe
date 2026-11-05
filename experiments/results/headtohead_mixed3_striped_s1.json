@@ -1,0 +1,117 @@
+{
+  "corpus": "mixed3",
+  "kind": "striped",
+  "seed": 1,
+  "steps": 600,
+  "training_tokens": 1228800,
+  "trainable_parameters": 114641,
+  "train_seconds": 18.919190791988513,
+  "history": [
+    {
+      "step": 300,
+      "train_loss": 2.106438636779785,
+      "train_seconds": 9.418486209004186
+    },
+    {
+      "step": 600,
+      "train_loss": 2.0037693977355957,
+      "train_seconds": 18.919148041983135
+    }
+  ],
+  "validation": {
+    "hamlet": {
+      "loss_nats": 2.1392499876022337,
+      "perplexity": 8.493065335238747,
+      "evaluated_characters": 102400
+    },
+    "alice": {
+      "loss_nats": 2.0108150100708007,
+      "perplexity": 7.469402505514612,
+      "evaluated_characters": 102400
+    },
+    "moby_dick": {
+      "loss_nats": 2.0363802194595335,
+      "perplexity": 7.662821204918192,
+      "evaluated_characters": 102400
+    }
+  },
+  "decode": {
+    "128": {
+      "prefill_ms_median": 2.132499997969717,
+      "decode_ms_per_token_median": 0.3995338438471663,
+      "cache_bytes": 90368,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "512": {
+      "prefill_ms_median": 6.0356670001056045,
+      "decode_ms_per_token_median": 0.4181731874268735,
+      "cache_bytes": 286976,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "1024": {
+      "prefill_ms_median": 10.84866700693965,
+      "decode_ms_per_token_median": 0.424082031713624,
+      "cache_bytes": 549120,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "2048": {
+      "prefill_ms_median": 23.591083998326212,
+      "decode_ms_per_token_median": 0.4360898437880678,
+      "cache_bytes": 1073408,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "4096": {
+      "prefill_ms_median": 66.58683301066048,
+      "decode_ms_per_token_median": 0.4723801866930444,
+      "cache_bytes": 2121984,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "8192": {
+      "prefill_ms_median": 205.36275001359172,
+      "decode_ms_per_token_median": 0.6464921880251495,
+      "cache_bytes": 4219136,
+      "repeats": 5,
+      "continuation_tokens": 32
+    }
+  },
+  "source_metadata": [
+    {
+      "url": "https://www.gutenberg.org/cache/epub/1524/pg1524.txt",
+      "sha256_raw": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+      "raw_bytes": 206895,
+      "normalized_characters": 178099,
+      "normalization": "strip Gutenberg wrapper; map smart quotes/dashes; ASCII",
+      "name": "hamlet"
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+      "sha256_raw": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+      "raw_bytes": 174311,
+      "normalized_characters": 144861,
+      "normalization": "strip Gutenberg wrapper; map smart quotes/dashes; ASCII",
+      "name": "alice"
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/2701/pg2701.txt",
+      "sha256_raw": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+      "raw_bytes": 1276315,
+      "normalized_characters": 1220651,
+      "normalization": "strip Gutenberg wrapper; map smart quotes/dashes; ASCII",
+      "name": "moby_dick"
+    }
+  ],
+  "environment": {
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  }
+}

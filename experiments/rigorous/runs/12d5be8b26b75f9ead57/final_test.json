@@ -1,0 +1,114 @@
+{
+  "run": "runs/12d5be8b26b75f9ead57",
+  "config": {
+    "phase": "posthoc_local",
+    "kind": "localonly",
+    "budget": "parameters",
+    "seed": 2,
+    "lr": 0.002,
+    "steps": 1800,
+    "context": 128,
+    "batch": 16,
+    "controller_sha256": "97a36317605b61c50032904c23db05b546a04392770ea3cb9c1da69c402ac8e1",
+    "plan_sha256": "1c44d3ced21b49018ca8da10030022004b51ebb6ed0d00ed13c8bca8316838a6",
+    "posthoc": true,
+    "provenance": {
+      "code": {
+        "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+        "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+      },
+      "data": {
+        "hamlet": {
+          "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+          "characters": 178099,
+          "gutenberg": 1524
+        },
+        "alice": {
+          "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+          "characters": 144861,
+          "gutenberg": 11
+        },
+        "moby": {
+          "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+          "characters": 1220651,
+          "gutenberg": 2701
+        }
+      },
+      "torch": "2.15.0",
+      "python": "3.13.3",
+      "device": "cpu",
+      "threads": 2,
+      "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+    }
+  },
+  "test": {
+    "frankenstein": {
+      "nats": 1.7691333826813527,
+      "ppl": 5.8657677821282,
+      "targets": 419428
+    },
+    "sherlock": {
+      "nats": 1.7614184911487596,
+      "ppl": 5.820688135817647,
+      "targets": 562331
+    }
+  },
+  "long_test": {
+    "frankenstein": {
+      "128": {
+        "nats": 2.1163585484027863,
+        "ppl": 8.300855222939536,
+        "targets": 1024
+      },
+      "512": {
+        "nats": 2.224480390548706,
+        "ppl": 9.248675855760595,
+        "targets": 1024
+      },
+      "2048": {
+        "nats": 2.5618070363998413,
+        "ppl": 12.959213941204489,
+        "targets": 1024
+      },
+      "8192": {
+        "nats": 2.46338614821434,
+        "ppl": 11.744512946164292,
+        "targets": 1024
+      }
+    },
+    "sherlock": {
+      "128": {
+        "nats": 2.0651212632656097,
+        "ppl": 7.886254152606403,
+        "targets": 1024
+      },
+      "512": {
+        "nats": 2.19479638338089,
+        "ppl": 8.978172765506141,
+        "targets": 1024
+      },
+      "2048": {
+        "nats": 2.549070954322815,
+        "ppl": 12.795210923616551,
+        "targets": 1024
+      },
+      "8192": {
+        "nats": 2.50885209441185,
+        "ppl": 12.290813266455674,
+        "targets": 1024
+      }
+    }
+  },
+  "test_metadata": {
+    "frankenstein": {
+      "raw_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+      "characters": 419429,
+      "gutenberg": 84
+    },
+    "sherlock": {
+      "raw_sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+      "characters": 562332,
+      "gutenberg": 1661
+    }
+  }
+}

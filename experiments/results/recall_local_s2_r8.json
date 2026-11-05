@@ -1,0 +1,160 @@
+{
+  "task": "recall",
+  "kind": "local",
+  "seed": 2,
+  "steps": 1000,
+  "modes": 8,
+  "parameters": 109568,
+  "initial": {
+    "loss_nats": 3.9354525327682497,
+    "accuracy": 0.03125,
+    "evaluated_targets": 640,
+    "perplexity": 51.185307745440795
+  },
+  "final": {
+    "loss_nats": 2.7774573230743407,
+    "accuracy": 0.059375,
+    "evaluated_targets": 1600,
+    "perplexity": 16.07808754765865
+  },
+  "transfer": {
+    "L48_pairs2": {
+      "loss_nats": 2.7800997257232667,
+      "accuracy": 0.053125,
+      "evaluated_targets": 640,
+      "perplexity": 16.120628509206206
+    },
+    "L48_pairs8": {
+      "loss_nats": 2.7718730926513673,
+      "accuracy": 0.0796875,
+      "evaluated_targets": 640,
+      "perplexity": 15.9885540226139
+    },
+    "L96_pairs4": {
+      "loss_nats": 2.777546799182892,
+      "accuracy": 0.0609375,
+      "evaluated_targets": 640,
+      "perplexity": 16.079526216727654
+    },
+    "L192_pairs4": {
+      "loss_nats": 2.7818182468414308,
+      "accuracy": 0.046875,
+      "evaluated_targets": 640,
+      "perplexity": 16.14835596802513
+    }
+  },
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 4.210224151611328,
+      "train_seconds": 0.030141291994368657,
+      "loss_nats": 3.6551562786102294,
+      "accuracy": 0.0625,
+      "evaluated_targets": 640,
+      "perplexity": 38.67356449383539
+    },
+    {
+      "step": 100,
+      "train_loss": 2.7539243698120117,
+      "train_seconds": 1.6253713249752764,
+      "loss_nats": 2.7940797567367555,
+      "accuracy": 0.053125,
+      "evaluated_targets": 640,
+      "perplexity": 16.347578080480353
+    },
+    {
+      "step": 200,
+      "train_loss": 2.753598213195801,
+      "train_seconds": 3.268358779780101,
+      "loss_nats": 2.843522918224335,
+      "accuracy": 0.0546875,
+      "evaluated_targets": 640,
+      "perplexity": 17.176169315794084
+    },
+    {
+      "step": 300,
+      "train_loss": 2.7824866771698,
+      "train_seconds": 4.893362992967013,
+      "loss_nats": 2.7987151861190798,
+      "accuracy": 0.059375,
+      "evaluated_targets": 640,
+      "perplexity": 16.423532027820933
+    },
+    {
+      "step": 400,
+      "train_loss": 2.789466381072998,
+      "train_seconds": 6.605718610924669,
+      "loss_nats": 2.8076863169670103,
+      "accuracy": 0.05,
+      "evaluated_targets": 640,
+      "perplexity": 16.571532556076424
+    },
+    {
+      "step": 500,
+      "train_loss": 2.7734603881835938,
+      "train_seconds": 8.318332239083247,
+      "loss_nats": 2.776887583732605,
+      "accuracy": 0.04375,
+      "evaluated_targets": 640,
+      "perplexity": 16.06892983764443
+    },
+    {
+      "step": 600,
+      "train_loss": 2.78205943107605,
+      "train_seconds": 9.976246782811359,
+      "loss_nats": 2.7833362460136413,
+      "accuracy": 0.0796875,
+      "evaluated_targets": 640,
+      "perplexity": 16.17288777393692
+    },
+    {
+      "step": 700,
+      "train_loss": 2.769097089767456,
+      "train_seconds": 11.678727825696114,
+      "loss_nats": 2.781162106990814,
+      "accuracy": 0.071875,
+      "evaluated_targets": 640,
+      "perplexity": 16.13776386348352
+    },
+    {
+      "step": 800,
+      "train_loss": 2.7595393657684326,
+      "train_seconds": 13.340156452904921,
+      "loss_nats": 2.776385176181793,
+      "accuracy": 0.0828125,
+      "evaluated_targets": 640,
+      "perplexity": 16.06085871362713
+    },
+    {
+      "step": 900,
+      "train_loss": 2.7637035846710205,
+      "train_seconds": 15.005523790139705,
+      "loss_nats": 2.779821181297302,
+      "accuracy": 0.071875,
+      "evaluated_targets": 640,
+      "perplexity": 16.11613882330944
+    },
+    {
+      "step": 1000,
+      "train_loss": 2.797240972518921,
+      "train_seconds": 16.95837062894134,
+      "loss_nats": 2.7799636244773867,
+      "accuracy": 0.046875,
+      "evaluated_targets": 640,
+      "perplexity": 16.11843462088059
+    }
+  ],
+  "train_seconds": 16.95837062894134,
+  "training_tokens": 1536000,
+  "environment": {
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  },
+  "data": null,
+  "checkpoint": "experiments/results/recall_local_s2_r8.pt"
+}

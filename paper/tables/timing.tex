@@ -1,0 +1,9 @@
+\begin{tabular}{rlrrr}\toprule
+Prefix & Model & Prefill (ms) & Decode (ms/char) & Cache (KiB)\\\midrule
+128 & Full attention & 0.661 & 0.1459 & 160.25 \\
+128 & Local + global & 0.742 & 0.1444 & 84.25 \\
+128 & ModalStripe & 1.005 & 0.1774 & 88.25 \\
+8,192 & Full attention & 201.524 & 0.3268 & 8,224.25 \\
+8,192 & Local + global & 115.441 & 0.2335 & 4,116.25 \\
+8,192 & ModalStripe & 130.785 & 0.2723 & 4,120.25 \\
+\bottomrule\end{tabular}

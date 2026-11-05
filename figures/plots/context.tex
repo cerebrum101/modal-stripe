@@ -1,0 +1,12 @@
+\begin{tikzpicture}\begin{axis}[name=left,legend to name=contextmodels,legend columns=3,width=8cm,height=5.4cm,title={(a) Training context 128},xmode=log,log basis x=2,xmin=110,xmax=9500,xtick={128,512,2048,8192},xticklabels={128,512,2{,}048,8{,}192},ymin=4,ymax=16,ytick={4,8,12,16},xlabel={History (characters; log scale)},ylabel={Perplexity}]
+\addplot[black,mark=*,mark options={fill=black},mark size=2pt] coordinates {(128,5.734344991) (512,11.271229965) (2048,10.568611189) (8192,11.047515730)};
+\addlegendentry{Full attention}
+\addplot[black!65,mark=square*,mark options={fill=black!65},dashed,mark size=2pt] coordinates {(128,5.734232846) (512,7.741930926) (2048,12.335655905) (8192,9.287957445)};
+\addlegendentry{Local + global}
+\addplot[black,mark=triangle*,mark options={fill=black},line width=.9pt,mark size=2pt] coordinates {(128,4.598926237) (512,7.163514683) (2048,7.054184769) (8192,8.780675376)};
+\addlegendentry{ModalStripe}
+\end{axis}\begin{axis}[at={(left.south east)},anchor=south west,xshift=1.8cm,width=8cm,height=5.4cm,title={(b) Training context 512},xmode=log,log basis x=2,xmin=110,xmax=9500,xtick={128,512,2048,8192},xticklabels={128,512,2{,}048,8{,}192},ymin=4,ymax=16,ytick={4,8,12,16},xlabel={History (characters; log scale)},ylabel={Perplexity}]
+\addplot[black,mark=*,mark options={fill=black},mark size=2pt] coordinates {(128,6.928663367) (512,7.168154634) (2048,8.821584230) (8192,9.276157927)};
+\addplot[black!65,mark=square*,mark options={fill=black!65},dashed,mark size=2pt] coordinates {(128,5.292384741) (512,5.436613687) (2048,14.849021225) (8192,8.982725477)};
+\addplot[black,mark=triangle*,mark options={fill=black},line width=.9pt,mark size=2pt] coordinates {(128,5.071076171) (512,5.183513027) (2048,8.092098078) (8192,6.872806752)};
+\end{axis}\node[anchor=south] at ($(left.north east)+(.7,.5)$) {\ref{contextmodels}};\end{tikzpicture}

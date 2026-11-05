@@ -1,0 +1,205 @@
+{
+  "pilots": [
+    {
+      "kind": "full",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.0005,
+      "score": 2.466260600776004
+    },
+    {
+      "kind": "full",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.001,
+      "score": 2.2852141918979894
+    },
+    {
+      "kind": "full",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.002,
+      "score": 2.1734864850856295
+    },
+    {
+      "kind": "localglobal",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.0005,
+      "score": 2.4482972227517834
+    },
+    {
+      "kind": "localglobal",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.001,
+      "score": 2.2484706848121165
+    },
+    {
+      "kind": "localglobal",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.002,
+      "score": 2.1133652384007737
+    },
+    {
+      "kind": "striped",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.0005,
+      "score": 2.458958549146829
+    },
+    {
+      "kind": "striped",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.001,
+      "score": 2.2374234582103774
+    },
+    {
+      "kind": "striped",
+      "budget": "parameters",
+      "context": 128,
+      "lr": 0.002,
+      "score": 2.0707594403949408
+    },
+    {
+      "kind": "full",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.0005,
+      "score": 2.4668138603808565
+    },
+    {
+      "kind": "full",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.001,
+      "score": 2.2868571600521053
+    },
+    {
+      "kind": "full",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.002,
+      "score": 2.1743711149614895
+    },
+    {
+      "kind": "localglobal",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.0005,
+      "score": 2.451742350282688
+    },
+    {
+      "kind": "localglobal",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.001,
+      "score": 2.2511247895118585
+    },
+    {
+      "kind": "localglobal",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.002,
+      "score": 2.1159129624890864
+    },
+    {
+      "kind": "striped",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.0005,
+      "score": 2.434505257064098
+    },
+    {
+      "kind": "striped",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.001,
+      "score": 2.2200569180628626
+    },
+    {
+      "kind": "striped",
+      "budget": "fixed_ff",
+      "context": 128,
+      "lr": 0.002,
+      "score": 2.0652003435293054
+    },
+    {
+      "kind": "full",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.0005,
+      "score": 2.508742195635244
+    },
+    {
+      "kind": "full",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.001,
+      "score": 2.328090779752892
+    },
+    {
+      "kind": "full",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.002,
+      "score": 2.214963094845669
+    },
+    {
+      "kind": "localglobal",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.0005,
+      "score": 2.4848891461486944
+    },
+    {
+      "kind": "localglobal",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.001,
+      "score": 2.2873118765857767
+    },
+    {
+      "kind": "localglobal",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.002,
+      "score": 2.144794826514043
+    },
+    {
+      "kind": "striped",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.0005,
+      "score": 2.4759907001373267
+    },
+    {
+      "kind": "striped",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.001,
+      "score": 2.257655046494303
+    },
+    {
+      "kind": "striped",
+      "budget": "parameters",
+      "context": 512,
+      "lr": 0.002,
+      "score": 2.099110174420128
+    }
+  ],
+  "selected": {
+    "parameters_128_full": 0.002,
+    "parameters_128_localglobal": 0.002,
+    "parameters_128_striped": 0.002,
+    "fixed_ff_128_full": 0.002,
+    "fixed_ff_128_localglobal": 0.002,
+    "fixed_ff_128_striped": 0.002,
+    "parameters_512_full": 0.002,
+    "parameters_512_localglobal": 0.002,
+    "parameters_512_striped": 0.002
+  },
+  "rule": "lowest equally weighted development nats; seed-0 pilot, 400 steps"
+}

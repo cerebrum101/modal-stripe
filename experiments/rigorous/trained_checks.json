@@ -1,0 +1,218 @@
+[
+  {
+    "run": "runs/30f44c7e880f2baf39e7",
+    "future_max_error": 0.0,
+    "cached_max_error": 6.67572021484375e-06,
+    "long_cached_max_error": 3.337860107421875e-06
+  },
+  {
+    "run": "runs/57a450edb6e8288d81b7",
+    "future_max_error": 0.0,
+    "cached_max_error": 5.0067901611328125e-06,
+    "long_cached_max_error": 2.1457672119140625e-06
+  },
+  {
+    "run": "runs/adc4231551e657e584e6",
+    "future_max_error": 6.198883056640625e-06,
+    "cached_max_error": 5.7220458984375e-06,
+    "long_cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "run": "runs/d05e15713b62f8c36aae",
+    "future_max_error": 0.0,
+    "cached_max_error": 1.049041748046875e-05,
+    "long_cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "run": "runs/dc0ebe0511ac565ea4cf",
+    "future_max_error": 0.0,
+    "cached_max_error": 4.291534423828125e-06,
+    "long_cached_max_error": 3.337860107421875e-06
+  },
+  {
+    "run": "runs/7bce15caff15fad17db8",
+    "future_max_error": 4.76837158203125e-06,
+    "cached_max_error": 5.7220458984375e-06,
+    "long_cached_max_error": 3.337860107421875e-06
+  },
+  {
+    "run": "runs/619e60ff5815c1dd7ea3",
+    "future_max_error": 0.0,
+    "cached_max_error": 1.1682510375976562e-05,
+    "long_cached_max_error": 2.1457672119140625e-06
+  },
+  {
+    "run": "runs/5a07d306986c25f008a1",
+    "future_max_error": 0.0,
+    "cached_max_error": 4.887580871582031e-06,
+    "long_cached_max_error": 1.9073486328125e-06
+  },
+  {
+    "run": "runs/2ebf3439133f5a9e1906",
+    "future_max_error": 3.814697265625e-06,
+    "cached_max_error": 5.7220458984375e-06,
+    "long_cached_max_error": 2.1457672119140625e-06
+  },
+  {
+    "run": "runs/e98ec644070dda2aa216",
+    "future_max_error": 0.0,
+    "cached_max_error": 6.67572021484375e-06,
+    "long_cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "run": "runs/070e1a6e7647efb4c834",
+    "future_max_error": 0.0,
+    "cached_max_error": 5.245208740234375e-06,
+    "long_cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "run": "runs/5dc38c04bca745bed01e",
+    "future_max_error": 3.814697265625e-06,
+    "cached_max_error": 5.4836273193359375e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/aeee6b7b4122a83a1e0d",
+    "future_max_error": 0.0,
+    "cached_max_error": 9.179115295410156e-06,
+    "long_cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "run": "runs/f8a2367a61770e3491f4",
+    "future_max_error": 0.0,
+    "cached_max_error": 4.76837158203125e-06,
+    "long_cached_max_error": 1.9073486328125e-06
+  },
+  {
+    "run": "runs/b15b89da01c83900f637",
+    "future_max_error": 3.814697265625e-06,
+    "cached_max_error": 5.245208740234375e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/e98138598efcdd6ff363",
+    "future_max_error": 0.0,
+    "cached_max_error": 5.9604644775390625e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/c1a4e1779cd22b9d64be",
+    "future_max_error": 0.0,
+    "cached_max_error": 5.245208740234375e-06,
+    "long_cached_max_error": 1.9073486328125e-06
+  },
+  {
+    "run": "runs/29aac15548ee77c6b359",
+    "future_max_error": 3.337860107421875e-06,
+    "cached_max_error": 4.887580871582031e-06,
+    "long_cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "run": "runs/3410bc7eaaf75ca5a918",
+    "future_max_error": 0.0,
+    "cached_max_error": 3.814697265625e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/6e7863449a21e5b012e0",
+    "future_max_error": 0.0,
+    "cached_max_error": 3.814697265625e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/c77a30b6062a89dfde29",
+    "future_max_error": 4.76837158203125e-06,
+    "cached_max_error": 6.67572021484375e-06,
+    "long_cached_max_error": 3.337860107421875e-06
+  },
+  {
+    "run": "runs/3910703148efdfbf9e17",
+    "future_max_error": 0.0,
+    "cached_max_error": 4.291534423828125e-06,
+    "long_cached_max_error": 1.9073486328125e-06
+  },
+  {
+    "run": "runs/70d66c780accb44bcc02",
+    "future_max_error": 0.0,
+    "cached_max_error": 4.291534423828125e-06,
+    "long_cached_max_error": 3.337860107421875e-06
+  },
+  {
+    "run": "runs/4ee1b65908f302d34490",
+    "future_max_error": 4.291534423828125e-06,
+    "cached_max_error": 5.245208740234375e-06,
+    "long_cached_max_error": 3.337860107421875e-06
+  },
+  {
+    "run": "runs/e972d8b79ef8ebf1d8c0",
+    "future_max_error": 0.0,
+    "cached_max_error": 4.291534423828125e-06,
+    "long_cached_max_error": 1.9073486328125e-06
+  },
+  {
+    "run": "runs/346417e6a8d41eab70fb",
+    "future_max_error": 0.0,
+    "cached_max_error": 3.814697265625e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/56b3d66049cb8fb25e35",
+    "future_max_error": 3.337860107421875e-06,
+    "cached_max_error": 6.198883056640625e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/c9df2d89dcd8d1271159",
+    "future_max_error": 0.0,
+    "cached_max_error": 7.152557373046875e-06,
+    "long_cached_max_error": 3.814697265625e-06
+  },
+  {
+    "run": "runs/396204db6e448c88fa4c",
+    "future_max_error": 0.0,
+    "cached_max_error": 1.0251998901367188e-05,
+    "long_cached_max_error": 6.198883056640625e-06
+  },
+  {
+    "run": "runs/1a88b2169bc455bf586d",
+    "future_max_error": 0.0,
+    "cached_max_error": 1.52587890625e-05,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/3cf096ba9be1b4429b66",
+    "future_max_error": 0.0,
+    "cached_max_error": 7.3909759521484375e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/86cb9bcbe37564e3ba0e",
+    "future_max_error": 0.0,
+    "cached_max_error": 9.5367431640625e-06,
+    "long_cached_max_error": 3.814697265625e-06
+  },
+  {
+    "run": "runs/aaa2b714ea6d8b6ee3db",
+    "future_max_error": 0.0,
+    "cached_max_error": 9.059906005859375e-06,
+    "long_cached_max_error": 2.86102294921875e-06
+  },
+  {
+    "run": "runs/72d385066a5d1d448138",
+    "future_max_error": 0.0,
+    "cached_max_error": 4.76837158203125e-06,
+    "long_cached_max_error": 3.814697265625e-06
+  },
+  {
+    "run": "runs/ca0bde6ff10e8bac455b",
+    "future_max_error": 0.0,
+    "cached_max_error": 6.198883056640625e-06,
+    "long_cached_max_error": 2.384185791015625e-06
+  },
+  {
+    "run": "runs/12d5be8b26b75f9ead57",
+    "future_max_error": 0.0,
+    "cached_max_error": 5.7220458984375e-06,
+    "long_cached_max_error": 2.1457672119140625e-06
+  }
+]

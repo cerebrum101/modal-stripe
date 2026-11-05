@@ -1,0 +1,73 @@
+{
+  "selected": {
+    "parameters_128_full": 0.002,
+    "parameters_128_localglobal": 0.002,
+    "parameters_128_striped": 0.002,
+    "fixed_ff_128_full": 0.002,
+    "fixed_ff_128_localglobal": 0.002,
+    "fixed_ff_128_striped": 0.002,
+    "parameters_512_full": 0.002,
+    "parameters_512_localglobal": 0.002,
+    "parameters_512_striped": 0.002
+  },
+  "runs": [
+    "runs/30f44c7e880f2baf39e7",
+    "runs/57a450edb6e8288d81b7",
+    "runs/adc4231551e657e584e6",
+    "runs/d05e15713b62f8c36aae",
+    "runs/dc0ebe0511ac565ea4cf",
+    "runs/7bce15caff15fad17db8",
+    "runs/619e60ff5815c1dd7ea3",
+    "runs/5a07d306986c25f008a1",
+    "runs/2ebf3439133f5a9e1906",
+    "runs/e98ec644070dda2aa216",
+    "runs/070e1a6e7647efb4c834",
+    "runs/5dc38c04bca745bed01e",
+    "runs/aeee6b7b4122a83a1e0d",
+    "runs/f8a2367a61770e3491f4",
+    "runs/b15b89da01c83900f637",
+    "runs/e98138598efcdd6ff363",
+    "runs/c1a4e1779cd22b9d64be",
+    "runs/29aac15548ee77c6b359",
+    "runs/3410bc7eaaf75ca5a918",
+    "runs/6e7863449a21e5b012e0",
+    "runs/c77a30b6062a89dfde29",
+    "runs/3910703148efdfbf9e17",
+    "runs/70d66c780accb44bcc02",
+    "runs/4ee1b65908f302d34490",
+    "runs/e972d8b79ef8ebf1d8c0",
+    "runs/346417e6a8d41eab70fb",
+    "runs/56b3d66049cb8fb25e35",
+    "runs/c9df2d89dcd8d1271159",
+    "runs/396204db6e448c88fa4c",
+    "runs/1a88b2169bc455bf586d"
+  ],
+  "provenance": {
+    "code": {
+      "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+      "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+    },
+    "data": {
+      "hamlet": {
+        "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+        "characters": 178099,
+        "gutenberg": 1524
+      },
+      "alice": {
+        "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+        "characters": 144861,
+        "gutenberg": 11
+      },
+      "moby": {
+        "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+        "characters": 1220651,
+        "gutenberg": 2701
+      }
+    },
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "device": "cpu",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "book": "frankenstein",
+    "nonoverlapping_128_character_blocks_checked": 3276,
+    "exact_training_matches": []
+  },
+  {
+    "book": "sherlock",
+    "nonoverlapping_128_character_blocks_checked": 4393,
+    "exact_training_matches": []
+  }
+]

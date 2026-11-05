@@ -1,0 +1,263 @@
+{
+  "environment": {
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  },
+  "rows": [
+    {
+      "scope": "full_training_step",
+      "kind": "full",
+      "length": 64,
+      "batch": 4,
+      "median_ms": 3.117583502898924,
+      "min_ms": 2.923583990195766,
+      "max_ms": 3.5947920114267617,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "local",
+      "length": 64,
+      "batch": 4,
+      "median_ms": 4.2814375046873465,
+      "min_ms": 4.182457982096821,
+      "max_ms": 4.686500004027039,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "spectral",
+      "length": 64,
+      "batch": 4,
+      "median_ms": 3.731749500730075,
+      "min_ms": 3.6037499958183616,
+      "max_ms": 4.702209000242874,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "hybrid",
+      "length": 64,
+      "batch": 4,
+      "median_ms": 5.909395506023429,
+      "min_ms": 5.69041699054651,
+      "max_ms": 6.113667011959478,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "striped",
+      "length": 64,
+      "batch": 4,
+      "median_ms": 4.688645989517681,
+      "min_ms": 4.554249986540526,
+      "max_ms": 5.065417004516348,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "full",
+      "length": 128,
+      "batch": 4,
+      "median_ms": 5.046333506470546,
+      "min_ms": 4.890916985459626,
+      "max_ms": 5.4735840240027755,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "local",
+      "length": 128,
+      "batch": 4,
+      "median_ms": 6.4692915038904175,
+      "min_ms": 6.195791997015476,
+      "max_ms": 6.798125017667189,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "spectral",
+      "length": 128,
+      "batch": 4,
+      "median_ms": 5.719749504351057,
+      "min_ms": 5.557208991376683,
+      "max_ms": 6.1116249999031425,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "hybrid",
+      "length": 128,
+      "batch": 4,
+      "median_ms": 9.1403749975143,
+      "min_ms": 8.650542004033923,
+      "max_ms": 10.117749974597245,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "striped",
+      "length": 128,
+      "batch": 4,
+      "median_ms": 7.0652499998686835,
+      "min_ms": 6.866500014439225,
+      "max_ms": 7.41491699591279,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "full",
+      "length": 256,
+      "batch": 4,
+      "median_ms": 10.073479483253323,
+      "min_ms": 9.903333004331216,
+      "max_ms": 10.317875014152378,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "local",
+      "length": 256,
+      "batch": 4,
+      "median_ms": 11.003375489963219,
+      "min_ms": 10.732542024925351,
+      "max_ms": 11.26287499209866,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "spectral",
+      "length": 256,
+      "batch": 4,
+      "median_ms": 10.031750003690831,
+      "min_ms": 9.717665991047397,
+      "max_ms": 10.623166977893561,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "hybrid",
+      "length": 256,
+      "batch": 4,
+      "median_ms": 15.90837498952169,
+      "min_ms": 15.498207998462021,
+      "max_ms": 16.21224998962134,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "striped",
+      "length": 256,
+      "batch": 4,
+      "median_ms": 13.266416499391198,
+      "min_ms": 13.025042018853128,
+      "max_ms": 13.66666701505892,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "full",
+      "length": 512,
+      "batch": 4,
+      "median_ms": 25.971228984417394,
+      "min_ms": 25.84783299244009,
+      "max_ms": 26.73791698180139,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "local",
+      "length": 512,
+      "batch": 4,
+      "median_ms": 20.03045800665859,
+      "min_ms": 19.43595800548792,
+      "max_ms": 21.936415985692292,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "spectral",
+      "length": 512,
+      "batch": 4,
+      "median_ms": 17.885749984998256,
+      "min_ms": 17.30783301172778,
+      "max_ms": 18.9042919955682,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "hybrid",
+      "length": 512,
+      "batch": 4,
+      "median_ms": 28.432250503101386,
+      "min_ms": 27.634540980216116,
+      "max_ms": 29.512125009205192,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "striped",
+      "length": 512,
+      "batch": 4,
+      "median_ms": 28.06164549838286,
+      "min_ms": 27.080333995399997,
+      "max_ms": 28.31366698956117,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "full",
+      "length": 1024,
+      "batch": 4,
+      "median_ms": 61.90595851512626,
+      "min_ms": 60.3840000112541,
+      "max_ms": 63.166000007186085,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "local",
+      "length": 1024,
+      "batch": 4,
+      "median_ms": 40.99887498887256,
+      "min_ms": 40.24000000208616,
+      "max_ms": 50.26212500524707,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "spectral",
+      "length": 1024,
+      "batch": 4,
+      "median_ms": 41.459728992776945,
+      "min_ms": 37.036333000287414,
+      "max_ms": 42.32520898221992,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "hybrid",
+      "length": 1024,
+      "batch": 4,
+      "median_ms": 58.67345799924806,
+      "min_ms": 56.52433299110271,
+      "max_ms": 63.64566698903218,
+      "repeats": 10
+    },
+    {
+      "scope": "full_training_step",
+      "kind": "striped",
+      "length": 1024,
+      "batch": 4,
+      "median_ms": 65.43802100350149,
+      "min_ms": 63.623416994232684,
+      "max_ms": 67.03687499975786,
+      "repeats": 10
+    }
+  ]
+}

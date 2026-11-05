@@ -1,0 +1,91 @@
+{
+  "corpus": "hamlet",
+  "kind": "full",
+  "seed": 0,
+  "steps": 600,
+  "training_tokens": 1228800,
+  "trainable_parameters": 114752,
+  "train_seconds": 14.018540791992564,
+  "history": [
+    {
+      "step": 300,
+      "train_loss": 2.150569200515747,
+      "train_seconds": 7.218911707983352
+    },
+    {
+      "step": 600,
+      "train_loss": 1.9801133871078491,
+      "train_seconds": 14.01849766698433
+    }
+  ],
+  "validation": {
+    "hamlet": {
+      "loss_nats": 1.9985396432876588,
+      "perplexity": 7.3782733165293575,
+      "evaluated_characters": 102400
+    }
+  },
+  "decode": {
+    "128": {
+      "prefill_ms_median": 1.0079999919980764,
+      "decode_ms_per_token_median": 0.31888018747849856,
+      "cache_bytes": 164096,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "512": {
+      "prefill_ms_median": 4.158124997047707,
+      "decode_ms_per_token_median": 0.34680859334912384,
+      "cache_bytes": 557312,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "1024": {
+      "prefill_ms_median": 9.517375001451,
+      "decode_ms_per_token_median": 0.35530468812794425,
+      "cache_bytes": 1081600,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "2048": {
+      "prefill_ms_median": 26.413541985675693,
+      "decode_ms_per_token_median": 0.377981749807077,
+      "cache_bytes": 2130176,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "4096": {
+      "prefill_ms_median": 84.35545899556018,
+      "decode_ms_per_token_median": 0.42544009374978486,
+      "cache_bytes": 4227328,
+      "repeats": 5,
+      "continuation_tokens": 32
+    },
+    "8192": {
+      "prefill_ms_median": 294.50595800881274,
+      "decode_ms_per_token_median": 0.5280911564113921,
+      "cache_bytes": 8421632,
+      "repeats": 5,
+      "continuation_tokens": 32
+    }
+  },
+  "source_metadata": [
+    {
+      "url": "https://www.gutenberg.org/cache/epub/1524/pg1524.txt",
+      "sha256_raw": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+      "raw_bytes": 206895,
+      "normalized_characters": 178099,
+      "normalization": "strip Gutenberg wrapper; map smart quotes/dashes; ASCII",
+      "name": "hamlet"
+    }
+  ],
+  "environment": {
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  }
+}

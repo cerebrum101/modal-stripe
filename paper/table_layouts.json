@@ -1,0 +1,50 @@
+{
+  "datasets": {
+    "columns": "lrrrrr",
+    "header": "Work & PG & Characters & Train & Develop & Final test\\\\"
+  },
+  "primary": {
+    "columns": "lrrr",
+    "header": "Model & Parameters & Loss (nats) & PPL\\\\"
+  },
+  "fixedff": {
+    "columns": "lrrr",
+    "header": "Model & Parameters & Loss (nats) & PPL\\\\"
+  },
+  "budgets": {
+    "columns": "lrrr",
+    "header": "Condition & Updates & Loss (nats) & PPL\\\\"
+  },
+  "timing": {
+    "columns": "rlrrr",
+    "header": "Prefix & Model & Prefill (ms) & Decode (ms/char) & Cache (KiB)\\\\"
+  },
+  "exact": {
+    "columns": "rlrr",
+    "header": "Train context & Model & PPL, history 128 & PPL, history 8,192\\\\"
+  },
+  "perbook": {
+    "columns": "lrr",
+    "header": "Model & Frankenstein & Sherlock Holmes\\\\"
+  },
+  "continuation": {
+    "columns": "rlrr",
+    "header": "Train context & Model & PPL, prefix 128 & PPL, prefix 8,192\\\\"
+  },
+  "longtrain": {
+    "columns": "lrr",
+    "header": "Model & Loss (nats) & PPL\\\\"
+  },
+  "learning": {
+    "columns": "lrr",
+    "header": "Model & Update & Development loss (nats)\\\\"
+  },
+  "train_timing": {
+    "columns": "rlr",
+    "header": "Context & Model & Step (ms)\\\\"
+  },
+  "localtiming": {
+    "columns": "lrr",
+    "header": "Model & Decode (ms/char) & Cache (KiB)\\\\"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "compiled_in_empty_directory": true,
+  "only_input": "main.tex",
+  "external_asset_inputs": 0,
+  "extracted_text_matches_repository_build": true,
+  "source_sha256": "f55c6bef03eac46b77f2468e985e0f473457a81f79aa0692e60aa06c51c83432",
+  "compiler": "Tectonic"
+}

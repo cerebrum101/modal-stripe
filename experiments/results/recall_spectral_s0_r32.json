@@ -1,0 +1,160 @@
+{
+  "task": "recall",
+  "kind": "spectral",
+  "seed": 0,
+  "steps": 1000,
+  "modes": 32,
+  "parameters": 109440,
+  "initial": {
+    "loss_nats": 3.8522579669952393,
+    "accuracy": 0.0421875,
+    "evaluated_targets": 640,
+    "perplexity": 47.099291902644836
+  },
+  "final": {
+    "loss_nats": 1.4671900129318238,
+    "accuracy": 0.33375,
+    "evaluated_targets": 1600,
+    "perplexity": 4.337031001327665
+  },
+  "transfer": {
+    "L48_pairs2": {
+      "loss_nats": 0.8208410382270813,
+      "accuracy": 0.525,
+      "evaluated_targets": 640,
+      "perplexity": 2.2724102179292154
+    },
+    "L48_pairs8": {
+      "loss_nats": 2.812003564834595,
+      "accuracy": 0.215625,
+      "evaluated_targets": 640,
+      "perplexity": 16.643230627476907
+    },
+    "L96_pairs4": {
+      "loss_nats": 4.316521298885346,
+      "accuracy": 0.0078125,
+      "evaluated_targets": 640,
+      "perplexity": 74.92752394228033
+    },
+    "L192_pairs4": {
+      "loss_nats": 4.715421891212463,
+      "accuracy": 0.0234375,
+      "evaluated_targets": 640,
+      "perplexity": 111.65590788452131
+    }
+  },
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 3.9113986492156982,
+      "train_seconds": 0.0281390409800224,
+      "loss_nats": 3.6809634923934937,
+      "accuracy": 0.05,
+      "evaluated_targets": 640,
+      "perplexity": 39.68461147982508
+    },
+    {
+      "step": 100,
+      "train_loss": 2.459742307662964,
+      "train_seconds": 1.4220973702031188,
+      "loss_nats": 2.3999754071235655,
+      "accuracy": 0.2375,
+      "evaluated_targets": 640,
+      "perplexity": 11.022905292360392
+    },
+    {
+      "step": 200,
+      "train_loss": 1.705406665802002,
+      "train_seconds": 2.894766161334701,
+      "loss_nats": 1.8573985040187835,
+      "accuracy": 0.325,
+      "evaluated_targets": 640,
+      "perplexity": 6.407047164419284
+    },
+    {
+      "step": 300,
+      "train_loss": 1.5333542823791504,
+      "train_seconds": 4.458938114228658,
+      "loss_nats": 1.6890665411949157,
+      "accuracy": 0.35,
+      "evaluated_targets": 640,
+      "perplexity": 5.414424203533151
+    },
+    {
+      "step": 400,
+      "train_loss": 1.6155496835708618,
+      "train_seconds": 5.961421988147777,
+      "loss_nats": 1.635128778219223,
+      "accuracy": 0.33125,
+      "evaluated_targets": 640,
+      "perplexity": 5.1301186020284515
+    },
+    {
+      "step": 500,
+      "train_loss": 1.499109148979187,
+      "train_seconds": 7.396012188139139,
+      "loss_nats": 1.5952089488506318,
+      "accuracy": 0.321875,
+      "evaluated_targets": 640,
+      "perplexity": 4.929358948406266
+    },
+    {
+      "step": 600,
+      "train_loss": 1.5859233140945435,
+      "train_seconds": 8.899339474068256,
+      "loss_nats": 1.5477881848812103,
+      "accuracy": 0.3203125,
+      "evaluated_targets": 640,
+      "perplexity": 4.7010607976703005
+    },
+    {
+      "step": 700,
+      "train_loss": 1.3746658563613892,
+      "train_seconds": 10.399213930038968,
+      "loss_nats": 1.5234454035758973,
+      "accuracy": 0.3265625,
+      "evaluated_targets": 640,
+      "perplexity": 4.588005525371978
+    },
+    {
+      "step": 800,
+      "train_loss": 1.5725290775299072,
+      "train_seconds": 11.845837756205583,
+      "loss_nats": 1.4980091989040374,
+      "accuracy": 0.315625,
+      "evaluated_targets": 640,
+      "perplexity": 4.4727757940489985
+    },
+    {
+      "step": 900,
+      "train_loss": 1.2835805416107178,
+      "train_seconds": 13.277325884992024,
+      "loss_nats": 1.4758002281188964,
+      "accuracy": 0.35,
+      "evaluated_targets": 640,
+      "perplexity": 4.3745349985666016
+    },
+    {
+      "step": 1000,
+      "train_loss": 1.3822859525680542,
+      "train_seconds": 14.734305050165858,
+      "loss_nats": 1.4669481754302978,
+      "accuracy": 0.321875,
+      "evaluated_targets": 640,
+      "perplexity": 4.335982271402487
+    }
+  ],
+  "train_seconds": 14.734305050165858,
+  "training_tokens": 1536000,
+  "environment": {
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  },
+  "data": null,
+  "checkpoint": "experiments/results/recall_spectral_s0_r32.pt"
+}

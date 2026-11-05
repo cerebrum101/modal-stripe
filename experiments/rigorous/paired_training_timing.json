@@ -1,0 +1,2888 @@
+{
+  "rows": [
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 18.676583014894277
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 24.418790999334306
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 18.063249997794628
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 17.684417020063847
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 21.938167017651722
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 25.076291000004858
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 26.25570900272578
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 21.192666987190023
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 0,
+      "step_ms": 19.98979100608267
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 21.8610419833567
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 21.901125001022592
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 19.338416983373463
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 25.076541991438717
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 25.424374995054677
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 17.943457991350442
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 20.239958976162598
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 25.269333011237904
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 1,
+      "step_ms": 21.016917016822845
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 26.03074998478405
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 18.39070799178444
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 24.836291006067768
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 21.471249987371266
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 17.47237500967458
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 19.42991599207744
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 19.82841599965468
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 26.13720900262706
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 2,
+      "step_ms": 18.159583007218316
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 20.904333010548726
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 17.23183400463313
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 25.72795798187144
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 19.808915996691212
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 25.966041983338073
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 21.996583993313834
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 19.776792003540322
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 22.268625005381182
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 3,
+      "step_ms": 15.911542024696246
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 15.350624977145344
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 17.382707999786362
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 15.536583989160135
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 16.55025000218302
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 24.69616601592861
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 20.4918330127839
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 21.569542004726827
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 26.453750004293397
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 4,
+      "step_ms": 25.323250010842457
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 21.960541984299198
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 18.307666992768645
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 18.95012499880977
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 25.299750006524846
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 21.665790991391987
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 25.428292021388188
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 26.344125013565645
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 20.76129100169055
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 5,
+      "step_ms": 17.538042011437938
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 18.791917013004422
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 22.24125000066124
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 25.019458000315353
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 17.253750003874302
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 25.482665980234742
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 18.68887501768768
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 24.96125001925975
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 21.253833023365587
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 6,
+      "step_ms": 19.69291700515896
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 22.1342500008177
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 18.929542013211176
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 25.124166975729167
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 17.659041011938825
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 21.590499993180856
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 19.57954201498069
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 25.433875009184703
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 21.35079202707857
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 7,
+      "step_ms": 17.524458991829306
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 22.416457999497652
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 17.159084003651515
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 16.08912501251325
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 22.85395801300183
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 18.70529100415297
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 19.555042003048584
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 24.763833003817126
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 19.544042006600648
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 8,
+      "step_ms": 20.935666980221868
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 22.07320899469778
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 23.434875009115785
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 19.247000018367544
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 24.17879199492745
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 19.21800000127405
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 18.71933400980197
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 25.172875000862405
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 17.01433298876509
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 9,
+      "step_ms": 21.50291600264609
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 25.615790975280106
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 21.574583020992577
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 16.82337498641573
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 23.546541982796043
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 17.81979200313799
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 15.848042006837204
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 20.605958998203278
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 17.393667018041015
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 10,
+      "step_ms": 15.422333002788946
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 20.16154199372977
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 17.186249984661117
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 21.22629201039672
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 15.776000014739111
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 17.550000018673018
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 17.23795902216807
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 15.287292015273124
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 21.358083002269268
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 11,
+      "step_ms": 15.953666006680578
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 17.09441700950265
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 21.193291002418846
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 20.581249991664663
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 19.69595899572596
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 23.14695800305344
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 19.070541980909184
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 28.639208001550287
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 30.800792010268196
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 12,
+      "step_ms": 42.27387497667223
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 24.83133302303031
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 23.99675000924617
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 17.633624986046925
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 16.181541985133663
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 18.266333994688466
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 18.090750003466383
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 21.347292000427842
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 18.264667014591396
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 13,
+      "step_ms": 15.539292013272643
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 20.72720800060779
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 15.838999999687076
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 17.774124979041517
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 20.472792006330565
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 15.518959000473842
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 17.133959016064182
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 16.83541599777527
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 20.952582999598235
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 14,
+      "step_ms": 15.491083991946653
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 15.662167017580941
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 15.562708023935556
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 17.880624975077808
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 15.893959003733471
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 17.715416004648432
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 20.730249991174787
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 17.89200000348501
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 20.539166987873614
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 15,
+      "step_ms": 20.090875012101606
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 17.883708991575986
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 14.963250025175512
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 20.570583001244813
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 20.828832988627255
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 23.614625009940937
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 15.393000008771196
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 17.749124992405996
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 15.33266602200456
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 16,
+      "step_ms": 17.970250017242506
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 15.400792006403208
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 20.815708994632587
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 15.438041999004781
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 17.53495799493976
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 15.562874992610887
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 17.077625001547858
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 18.196666991570964
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 20.4149579803925
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 17,
+      "step_ms": 21.00608398905024
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 15.841499989619479
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 17.92079201550223
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 23.208791011711583
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 24.55750000081025
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 22.34404199407436
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 25.47125000273809
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 18.833709007594734
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 21.577917010290548
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 18,
+      "step_ms": 17.11658400017768
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 25.370667019160464
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 26.238457998260856
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 19.312916992930695
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 20.61124998726882
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 17.28054098202847
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 25.06320900283754
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 21.19899998069741
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 20.297582988860086
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 128,
+      "batch": 16,
+      "repeat": 19,
+      "step_ms": 20.160541986115277
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 50.82529102219269
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 37.713500001700595
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 27.329707983881235
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 28.997083980357274
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 27.325250004651025
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 27.33104201615788
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 31.87616597278975
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 24.724209011765197
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 0,
+      "step_ms": 31.110167008591816
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 28.520874999230728
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 25.151707988698035
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 30.381749995285645
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 28.586833010194823
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 23.985749983694404
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 30.039917008252814
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 28.604916005861014
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 30.26962498552166
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 1,
+      "step_ms": 31.137959012994543
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 35.51349998451769
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 28.5067499789875
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 33.52620801888406
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 31.005291995825246
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 30.50812499714084
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 26.965500001097098
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 29.794667003443465
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 30.94208298716694
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 2,
+      "step_ms": 26.635332993464544
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 28.239541978109628
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 24.819750018650666
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 28.60129199689254
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 29.167624976253137
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 25.339167012134567
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 27.272250008536503
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 29.135082993889228
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 30.592584022087976
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 3,
+      "step_ms": 29.153958021197468
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 29.564667027443647
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 28.0820420011878
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 30.836291989544407
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 26.35658302460797
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 29.569583013653755
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 26.341750024585053
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 29.897875007009134
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 31.49895797832869
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 4,
+      "step_ms": 32.54658301011659
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 29.612041980726644
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 29.059207998216152
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 31.714957993244752
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 32.42020797915757
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 29.992666997713968
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 28.715458000078797
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 27.28208401822485
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 23.520916991401464
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 5,
+      "step_ms": 23.321333021158352
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 26.706417003879324
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 30.654374975711107
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 28.532917000120506
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 31.50983402156271
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 30.292583018308505
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 33.26325002126396
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 27.762832993175834
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 28.181750007206574
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 6,
+      "step_ms": 27.08566701039672
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 30.096333008259535
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 33.76737501821481
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 28.897917014546692
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 27.275582979200408
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 23.684666986810043
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 26.350166997872293
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 23.45637502730824
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 23.11612499761395
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 7,
+      "step_ms": 26.22929200879298
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 26.627082988852635
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 23.61412500613369
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 28.5602500080131
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 26.203459012322128
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 25.74674997595139
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 23.82745800423436
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 31.012499995995313
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 27.962874999502674
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 8,
+      "step_ms": 23.625041008926928
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 26.733000006061047
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 23.31150000100024
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 23.41775002423674
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 26.01937501458451
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 29.810833017108962
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 23.829209007089958
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 26.24558299430646
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 28.28949998365715
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 9,
+      "step_ms": 27.844791999086738
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 23.30179201089777
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 22.3515419929754
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 26.57083302619867
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 27.578250010265037
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 28.71812501689419
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 26.434041996253654
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 27.276000007987022
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 27.96570901409723
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 10,
+      "step_ms": 26.375000015832484
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 27.5996669952292
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 30.271833995357156
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 26.54054100275971
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 26.64891700260341
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 22.54908299073577
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 25.49712502514012
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 22.496124991448596
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 23.021916014840826
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 11,
+      "step_ms": 26.412041974253953
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 25.97399998921901
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 23.10320799006149
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 25.760249991435558
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 26.44200000213459
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 22.550916008185595
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 25.994916999479756
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 26.03062501293607
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 22.645999997621402
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 12,
+      "step_ms": 26.54208298190497
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 22.82854201621376
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 26.72633301699534
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 22.462749999249354
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 25.71124999667518
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 25.52345799631439
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 22.74116699118167
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 27.257709007244557
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 26.119874994037673
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 13,
+      "step_ms": 26.563791994703934
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 25.959332997445017
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 26.437833992531523
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 22.773959004553035
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 22.41466601844877
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 23.11729101347737
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 26.935875008348376
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 25.952208001399413
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 26.009624998550862
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 14,
+      "step_ms": 26.157916989177465
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 26.371207990450785
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 25.88787500280887
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 26.703375013312325
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 26.582874997984618
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 26.037625008029863
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 26.544166990788653
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 22.88216698798351
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 23.136624979088083
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 15,
+      "step_ms": 22.81483300612308
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 26.159500004723668
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 26.21833299053833
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 22.4135419994127
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 22.694332990795374
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 25.836832995992154
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 22.45274998131208
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 25.938917009625584
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 25.503417011350393
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 16,
+      "step_ms": 25.173000001814216
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 22.6247500104364
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 25.603917019907385
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 25.949041999410838
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 26.125082978978753
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 22.344375000102445
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 25.372584001161158
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 22.35170899075456
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 25.636167003540322
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 17,
+      "step_ms": 25.924583023879677
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 26.4655840001069
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 42.511042003752664
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 47.43320800480433
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 29.91037501487881
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 25.248332996852696
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 29.022000002441928
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 22.677125001791865
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 26.45083298557438
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 18,
+      "step_ms": 26.295791001757607
+    },
+    {
+      "kind": "striped",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 26.271042006555945
+    },
+    {
+      "kind": "full",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 25.799916009418666
+    },
+    {
+      "kind": "localglobal",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 22.554791998118162
+    },
+    {
+      "kind": "striped",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 26.67749999091029
+    },
+    {
+      "kind": "full",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 25.88349999859929
+    },
+    {
+      "kind": "striped",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 27.24195900373161
+    },
+    {
+      "kind": "localglobal",
+      "seed": 0,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 22.539208992384374
+    },
+    {
+      "kind": "localglobal",
+      "seed": 1,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 22.754875011742115
+    },
+    {
+      "kind": "full",
+      "seed": 2,
+      "context": 512,
+      "batch": 4,
+      "repeat": 19,
+      "step_ms": 25.98908299114555
+    }
+  ],
+  "device": "cpu",
+  "warmup_steps": 3,
+  "measurement_code_sha256": "4b177e1e44f85bade83bcf17a2c61bac4ec68db501531339ceba1d23edd9428d",
+  "note": "model-only forward/loss/backward/clip/AdamW; data sampling excluded; checkpoints unchanged"
+}

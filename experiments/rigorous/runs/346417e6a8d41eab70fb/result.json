@@ -1,0 +1,148 @@
+{
+  "config": {
+    "phase": "main",
+    "kind": "localglobal",
+    "budget": "parameters",
+    "seed": 2,
+    "lr": 0.002,
+    "steps": 1800,
+    "context": 512,
+    "batch": 4,
+    "provenance": {
+      "code": {
+        "study.py": "77b87f56be8123b8d5e8250428b29b907a127b560bb07aab39f5c6caa1244540",
+        "model.py": "afa4b39a20cac0503caa680ae5edcd56577813ba30794939ec0f5cc51e3b406d"
+      },
+      "data": {
+        "hamlet": {
+          "raw_sha256": "31584c19795779431b5933499a45b9cecb03e8c246b6ea7e245a2b6d65e8e784",
+          "characters": 178099,
+          "gutenberg": 1524
+        },
+        "alice": {
+          "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+          "characters": 144861,
+          "gutenberg": 11
+        },
+        "moby": {
+          "raw_sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+          "characters": 1220651,
+          "gutenberg": 2701
+        }
+      },
+      "torch": "2.15.0",
+      "python": "3.13.3",
+      "device": "cpu",
+      "threads": 2,
+      "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+    }
+  },
+  "steps": 1800,
+  "tokens": 3686400,
+  "train_seconds": 49.812630250584334,
+  "parameters": 120768,
+  "history": [
+    {
+      "step": 300,
+      "train_seconds": 8.35760755094816,
+      "dev": {
+        "hamlet": {
+          "nats": 2.212341250545406,
+          "ppl": 9.137083572216962,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 2.0667555042987122,
+          "ppl": 7.899152729561199,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 2.0742945316688215,
+          "ppl": 7.958929705189652,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 600,
+      "train_seconds": 17.209723207721254,
+      "dev": {
+        "hamlet": {
+          "nats": 2.082395848435899,
+          "ppl": 8.023669400167517,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.9149741447008928,
+          "ppl": 6.786763320935196,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.96161471902035,
+          "ppl": 7.110799743683799,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 1200,
+      "train_seconds": 33.55580000561895,
+      "dev": {
+        "hamlet": {
+          "nats": 1.9816543705051475,
+          "ppl": 7.25473508248294,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.8070218445393065,
+          "ppl": 6.092276640993952,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.8691820010146365,
+          "ppl": 6.482991149555628,
+          "targets": 122064
+        }
+      }
+    },
+    {
+      "step": 1800,
+      "train_seconds": 49.812630250584334,
+      "dev": {
+        "hamlet": {
+          "nats": 1.9425887223999359,
+          "ppl": 6.976788582261935,
+          "targets": 17809
+        },
+        "alice": {
+          "nats": 1.7746139942468098,
+          "ppl": 5.8980040333706505,
+          "targets": 14485
+        },
+        "moby": {
+          "nats": 1.8334590375837516,
+          "ppl": 6.2554872438501645,
+          "targets": 122064
+        }
+      }
+    }
+  ],
+  "dev": {
+    "hamlet": {
+      "nats": 1.9425887223999359,
+      "ppl": 6.976788582261935,
+      "targets": 17809
+    },
+    "alice": {
+      "nats": 1.7746139942468098,
+      "ppl": 5.8980040333706505,
+      "targets": 14485
+    },
+    "moby": {
+      "nats": 1.8334590375837516,
+      "ppl": 6.2554872438501645,
+      "targets": 122064
+    }
+  },
+  "checkpoint_sha256": "e70149f0bc08664bee4452766f534d7eedabdca520890fe34b0eeaa64ef6729b"
+}

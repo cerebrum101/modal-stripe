@@ -1,0 +1,10 @@
+\begin{tabular}{rlrr}\toprule
+Train context & Model & PPL, history 128 & PPL, history 8,192\\\midrule
+128 & Full attention & 5.734 & 11.048 \\
+128 & Local + global & 5.734 & 9.288 \\
+128 & ModalStripe & 4.599 & 8.781 \\
+512 & Full attention & 6.929 & 9.276 \\
+512 & Local + global & 5.292 & 8.983 \\
+512 & ModalStripe & 5.071 & 6.873 \\
+128 & Local-only & 5.240 & 11.852 \\
+\bottomrule\end{tabular}

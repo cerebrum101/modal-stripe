@@ -1,0 +1,16 @@
+.venv/
+.venv-arm/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.tmp
+output/
+qa-renders/
+experiments/rigorous/archives/

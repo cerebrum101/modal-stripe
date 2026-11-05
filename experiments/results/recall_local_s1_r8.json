@@ -1,0 +1,160 @@
+{
+  "task": "recall",
+  "kind": "local",
+  "seed": 1,
+  "steps": 1000,
+  "modes": 8,
+  "parameters": 109568,
+  "initial": {
+    "loss_nats": 3.7240522503852844,
+    "accuracy": 0.05,
+    "evaluated_targets": 640,
+    "perplexity": 41.43194701943125
+  },
+  "final": {
+    "loss_nats": 2.77192524433136,
+    "accuracy": 0.068125,
+    "evaluated_targets": 1600,
+    "perplexity": 15.98938787431003
+  },
+  "transfer": {
+    "L48_pairs2": {
+      "loss_nats": 2.7724605441093444,
+      "accuracy": 0.05625,
+      "evaluated_targets": 640,
+      "perplexity": 15.997949281344459
+    },
+    "L48_pairs8": {
+      "loss_nats": 2.7814155220985413,
+      "accuracy": 0.0515625,
+      "evaluated_targets": 640,
+      "perplexity": 16.14185393487251
+    },
+    "L96_pairs4": {
+      "loss_nats": 2.779318106174469,
+      "accuracy": 0.065625,
+      "evaluated_targets": 640,
+      "perplexity": 16.108033233822475
+    },
+    "L192_pairs4": {
+      "loss_nats": 2.7706325173377992,
+      "accuracy": 0.06875,
+      "evaluated_targets": 640,
+      "perplexity": 15.96873131551664
+    }
+  },
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 3.756303310394287,
+      "train_seconds": 0.029104958986863494,
+      "loss_nats": 3.5934898257255554,
+      "accuracy": 0.053125,
+      "evaluated_targets": 640,
+      "perplexity": 36.36074743897815
+    },
+    {
+      "step": 100,
+      "train_loss": 2.824507474899292,
+      "train_seconds": 1.6470483747834805,
+      "loss_nats": 2.795241892337799,
+      "accuracy": 0.053125,
+      "evaluated_targets": 640,
+      "perplexity": 16.36658722642173
+    },
+    {
+      "step": 200,
+      "train_loss": 2.846221923828125,
+      "train_seconds": 3.4076444607053418,
+      "loss_nats": 2.79842494726181,
+      "accuracy": 0.0578125,
+      "evaluated_targets": 640,
+      "perplexity": 16.418765972333553
+    },
+    {
+      "step": 300,
+      "train_loss": 2.773839235305786,
+      "train_seconds": 5.283649368619081,
+      "loss_nats": 2.8065006256103517,
+      "accuracy": 0.05,
+      "evaluated_targets": 640,
+      "perplexity": 16.551895477216025
+    },
+    {
+      "step": 400,
+      "train_loss": 2.7865829467773438,
+      "train_seconds": 6.959347288473509,
+      "loss_nats": 2.798911213874817,
+      "accuracy": 0.0796875,
+      "evaluated_targets": 640,
+      "perplexity": 16.4267518115188
+    },
+    {
+      "step": 500,
+      "train_loss": 2.7919540405273438,
+      "train_seconds": 8.667101907456527,
+      "loss_nats": 2.7818464279174804,
+      "accuracy": 0.0578125,
+      "evaluated_targets": 640,
+      "perplexity": 16.148811052485097
+    },
+    {
+      "step": 600,
+      "train_loss": 2.7689573764801025,
+      "train_seconds": 10.363109322439414,
+      "loss_nats": 2.786725175380707,
+      "accuracy": 0.053125,
+      "evaluated_targets": 640,
+      "perplexity": 16.227789524797352
+    },
+    {
+      "step": 700,
+      "train_loss": 2.7645556926727295,
+      "train_seconds": 12.080612866557203,
+      "loss_nats": 2.784660828113556,
+      "accuracy": 0.065625,
+      "evaluated_targets": 640,
+      "perplexity": 16.19432428566184
+    },
+    {
+      "step": 800,
+      "train_loss": 2.7327349185943604,
+      "train_seconds": 13.94060573153547,
+      "loss_nats": 2.778770411014557,
+      "accuracy": 0.0671875,
+      "evaluated_targets": 640,
+      "perplexity": 16.099213357506862
+    },
+    {
+      "step": 900,
+      "train_loss": 2.806400775909424,
+      "train_seconds": 16.072991808556253,
+      "loss_nats": 2.7828218936920166,
+      "accuracy": 0.0640625,
+      "evaluated_targets": 640,
+      "perplexity": 16.164571350532214
+    },
+    {
+      "step": 1000,
+      "train_loss": 2.7882611751556396,
+      "train_seconds": 18.007827518566046,
+      "loss_nats": 2.773270070552826,
+      "accuracy": 0.0546875,
+      "evaluated_targets": 640,
+      "perplexity": 16.01090528773653
+    }
+  ],
+  "train_seconds": 18.007827518566046,
+  "training_tokens": 1536000,
+  "environment": {
+    "torch": "2.15.0",
+    "python": "3.13.3",
+    "machine": "arm64",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 2,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O"
+  },
+  "data": null,
+  "checkpoint": "experiments/results/recall_local_s1_r8.pt"
+}
