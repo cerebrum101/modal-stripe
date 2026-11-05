@@ -1,20 +1,21 @@
 {
-  "reviewed_at": "2026-11-05T19:45:55.027983+05:00",
+  "reviewed_at": "2026-11-05T20:13:13.549176+05:00",
   "main_pages": 6,
   "references_pages": 1,
   "appendix_pages": 6,
-  "figures": 5,
+  "figures": 4,
   "single_file_compilation": "passed in otherwise empty directory",
   "table_and_plot_regeneration": "byte-for-byte match",
   "saved_checkpoint_verification": "66 passed",
   "final_evaluation_consistency": "36 passed",
   "operator_equivalence": "passed on deterministic random inputs",
-  "visual_review": "All 13 pages reviewed; latest architecture/cell and measured plots integrated; no clipping or overfull lines detected",
+  "visual_review": "All pages reviewed; crowded loss plot replaced by exact-value table with all controls and seed SD retained. No clipping detected.",
   "privacy": "No credential signatures found; nonportable legacy checkpoint paths replaced by repository-relative paths; audited evidence unchanged",
   "not_performed": [
     "new training",
     "GPU benchmarks",
     "external peer review",
     "arXiv submission"
-  ]
+  ],
+  "change_scope": "Presentation only; frozen experiment records unchanged."
 }

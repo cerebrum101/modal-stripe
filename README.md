@@ -14,8 +14,8 @@ These are tiny character models, three optimization seeds and two final books, m
 
 ## Contents
 
-- `main.tex`: self-contained paper, with all five current figures, tables, references and equations embedded. No external figure, bibliography or table files are needed to compile it.
-- `modal-stripe.pdf`: compiled v0.5 paper.
+- `main.tex`: self-contained paper, with all four current figures, tables, references and equations embedded. No external figure, bibliography or table files are needed to compile it.
+- `modal-stripe.pdf`: compiled v0.6 paper.
 - `experiments/rigorous/`: controlled study, raw timing/evaluation records, 66 completed training runs with checkpoints and frozen source snapshots, and five original corpus snapshots. There are 36 final evaluated checkpoints; the other runs are tuning pilots.
 - `experiments/`: earlier exploration, including recall, Zipf/frequency and head-to-head runs. These are historical experiments, not interchangeable with the controlled study or evidence for every paper claim.
 - `figures/`: reviewed schematics, PGFPlots sources, and numerical plot generation.

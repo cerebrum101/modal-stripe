@@ -2,27 +2,7 @@
 from pathlib import Path
 import json, math, statistics as st, hashlib
 P=Path(__file__).resolve().parent;S=P.parent/'experiments/rigorous'
-groups={}
-for e in json.loads((S/'final_evaluations.json').read_text()):
- c=e['config']
- if c['budget']=='parameters' and c['context']==128:
-  groups.setdefault((c['phase'],c['kind']),[]).append(st.mean(b['nats'] for b in e['test'].values()))
 style={'full':'black,mark=*,mark options={fill=black}','localglobal':'black!65,mark=square*,mark options={fill=black!65},dashed','striped':'black,mark=triangle*,mark options={fill=black},line width=.9pt','localonly':'black!65,mark=diamond*,mark options={fill=black!65}'}
-def plotquality(rows):
- s=''
- for y,key in rows:
-  v=groups[key];mu=st.mean(v);sd=st.stdev(v);k=key[1]
-  s+=r'\addplot['+style[k]+r',only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {'+f'({mu:.10f},{y}) +- ({sd:.10f},0)'+'};\n'
-  s+=r'\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {'+' '.join(f'({x:.10f},{y+.13})' for x in v)+'};\n'
- return s
-q=r'''\begin{tikzpicture}
-\begin{axis}[name=left,width=7.0cm,height=4.65cm,xmin=1.62,xmax=1.83,ymin=-.5,ymax=3.5,
-xtick={1.65,1.70,1.75,1.80},ytick={0,1,2,3},yticklabels={ModalStripe,Local-only$^*$,Local + global,Full attention},xlabel={Loss (nats/character)},title={(a) Equal training characters},ytick style={draw=none},axis y line*=left,y axis line style={draw=none}]
-'''+plotquality([(3,('main','full')),(2,('main','localglobal')),(1,('posthoc_local','localonly')),(0,('main','striped'))])+r'''\end{axis}
-\begin{axis}[at={(left.south east)},anchor=south west,xshift=3.25cm,width=7.0cm,height=4.65cm,xmin=1.62,xmax=1.83,ymin=-.5,ymax=3.5,
-xtick={1.65,1.70,1.75,1.80},ytick={0,1,2,3},yticklabels={ModalStripe: 1{,}800,Full: elapsed time$^\dagger$,Full: 2{,}439,Full: 1{,}800},xlabel={Loss (nats/character)},title={(b) Training budgets},ytick style={draw=none},axis y line*=left,y axis line style={draw=none}]
-'''+plotquality([(3,('main','full')),(2,('calibrated_time','full')),(1,('equal_time','full')),(0,('main','striped'))])+r'\end{axis}\end{tikzpicture}'
-(P/'plots/quality.tex').write_text(q)
 rows=json.loads((S/'paired_timing.json').read_text())['rows'];timing={}
 for k in ('full','localglobal','striped'):
  timing[k]={L:{m:[st.median(r[m] for r in rows if r['kind']==k and r['length']==L and r['seed']==seed) for seed in range(3)] for m in ('decode_ms','cache_bytes')} for L in (128,512,2048,8192)}
@@ -58,4 +38,4 @@ out+=r'\node[anchor=south] at ($(left.north east)+(.7,.5)$) {\ref{contextmodels}
 (P/'plots/context.tex').write_text(out)
 (P/'plots/provenance.json').write_text(json.dumps({n:hashlib.sha256((S/n).read_bytes()).hexdigest() for n in ('final_evaluations.json','paired_timing.json','exact_window_audit.json')},indent=2))
 
-print("Wrote quality, resource and context PGFPlots from frozen JSON.")
+print("Wrote resource and context PGFPlots from frozen JSON.")

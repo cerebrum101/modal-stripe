@@ -37,8 +37,8 @@
 \newcommand{\R}{\mathbb{R}}
 \title{ModalStripe: Modal Memory and Attention\\in Small Language Models}
 \author{Atay Kim\\[3pt]\normalsize Nazarbayev University\\\normalsize Astana, Kazakhstan\\\normalsize\href{mailto:atay.kim@nu.edu.kz}{\texttt{atay.kim@nu.edu.kz}}}
-\date{\small November 5, 2026\quad (v0.5)}
-\hypersetup{pdftitle={ModalStripe: Modal Memory and Attention in Small Language Models},pdfauthor={Atay Kim},pdfsubject={Version 0.5, November 5, 2026}}
+\date{\small November 5, 2026\quad (v0.6)}
+\hypersetup{pdftitle={ModalStripe: Modal Memory and Attention in Small Language Models},pdfauthor={Atay Kim},pdfsubject={Version 0.6, November 5, 2026}}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -156,39 +156,26 @@ We check sampling, shifted targets, document boundaries, future-token influence,
 
 \section{Results}
 \subsection{Prediction quality and training budget}
-Figure~\ref{fig:quality} shows a 7.5\% perplexity reduction against full attention at equal training characters. Adding the modal branch improves on local plus global attention in all three seeds: paired loss differences are $-0.0684$, $-0.0645$ and $-0.0602$ nats. The direction persists with fixed feed-forward widths, where the hybrid has extra parameters (Appendix~\ref{app:results}). This supports adding the complete modal branch in this setup; it does not isolate Fourier modes from other possible extra gated mixers.
+Table~\ref{tab:comparison} shows a 7.5\% perplexity reduction against full attention at equal training characters. Adding the modal branch improves on local plus global attention in all three seeds: paired loss differences are $-0.0684$, $-0.0645$ and $-0.0602$ nats. The direction persists with fixed feed-forward widths, where the hybrid has extra parameters (Appendix~\ref{app:results}). This supports adding the complete modal branch in this setup; it does not isolate Fourier modes from other possible extra gated mixers.
 
-\begin{figure}[htbp]
-\centering\resizebox{\textwidth}{!}{
-% BEGIN figures/plots/quality.tex
-\begin{tikzpicture}
-\begin{axis}[name=left,width=7.0cm,height=4.65cm,xmin=1.62,xmax=1.83,ymin=-.5,ymax=3.5,
-xtick={1.65,1.70,1.75,1.80},ytick={0,1,2,3},yticklabels={ModalStripe,Local-only$^*$,Local + global,Full attention},xlabel={Loss (nats/character)},title={(a) Equal training characters},ytick style={draw=none},axis y line*=left,y axis line style={draw=none}]
-\addplot[black,mark=*,mark options={fill=black},only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {(1.7995751904,3) +- (0.0093327860,0)};
-\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {(1.8091002695,3.13) (1.7991779166,3.13) (1.7904473851,3.13)};
-\addplot[black!65,mark=square*,mark options={fill=black!65},dashed,only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {(1.7856989342,2) +- (0.0033050463,0)};
-\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {(1.7880092494,2.13) (1.7871743971,2.13) (1.7819131561,2.13)};
-\addplot[black!65,mark=diamond*,mark options={fill=black!65},only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {(1.7675650366,1) +- (0.0022196186,0)};
-\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {(1.7697079469,1.13) (1.7677112260,1.13) (1.7652759369,1.13)};
-\addplot[black,mark=triangle*,mark options={fill=black},line width=.9pt,only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {(1.7213171540,0) +- (0.0015783976,0)};
-\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {(1.7195883558,0.13) (1.7226813346,0.13) (1.7216817716,0.13)};
-\end{axis}
-\begin{axis}[at={(left.south east)},anchor=south west,xshift=3.25cm,width=7.0cm,height=4.65cm,xmin=1.62,xmax=1.83,ymin=-.5,ymax=3.5,
-xtick={1.65,1.70,1.75,1.80},ytick={0,1,2,3},yticklabels={ModalStripe: 1{,}800,Full: elapsed time$^\dagger$,Full: 2{,}439,Full: 1{,}800},xlabel={Loss (nats/character)},title={(b) Training budgets},ytick style={draw=none},axis y line*=left,y axis line style={draw=none}]
-\addplot[black,mark=*,mark options={fill=black},only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {(1.7995751904,3) +- (0.0093327860,0)};
-\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {(1.8091002695,3.13) (1.7991779166,3.13) (1.7904473851,3.13)};
-\addplot[black,mark=*,mark options={fill=black},only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {(1.7406215913,2) +- (0.0045175015,0)};
-\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {(1.7447996544,2.13) (1.7412373075,2.13) (1.7358278118,2.13)};
-\addplot[black,mark=*,mark options={fill=black},only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {(1.6471622777,1) +- (0.0073393169,0)};
-\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {(1.6507480775,1.13) (1.6387194078,1.13) (1.6520193479,1.13)};
-\addplot[black,mark=triangle*,mark options={fill=black},line width=.9pt,only marks,mark size=2pt,error bars/.cd,x dir=both,x explicit] coordinates {(1.7213171540,0) +- (0.0015783976,0)};
-\addplot[only marks,black!60,mark=*,mark size=.7pt] coordinates {(1.7195883558,0.13) (1.7226813346,0.13) (1.7216817716,0.13)};
-\end{axis}\end{tikzpicture}
-% END figures/plots/quality.tex
-}
-\caption{Final-book reset-128 loss for parameter-matched models; lower is better. Large markers are three-seed means, whiskers are sample SDs, and small markers are individual seeds. (a) All models receive 1,800 updates. $^*$Exploratory local-only control. (b) Attention receives different training allowances. $^\dagger$Elapsed-time runs use 4,417, 4,609 and 4,146 updates; changing host load confounds this comparison. Exact scores are in Table~\ref{tab:comparison}.}
-\label{fig:quality}
-\end{figure}
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Final-book reset-128 results for approximately parameter-matched, context-128-trained models. Loss is mean $\pm$ sample SD across three seeds; PPL exponentiates mean loss. Calibrated attention receives 2,439 updates. Elapsed-time matching uses 4,417, 4,609 and 4,146 updates (rounded mean shown) and is confounded by changing host load. $\dagger$ marks the exploratory local-only control.}
+\label{tab:comparison}
+
+% BEGIN paper/tables/comparison.tex
+\begin{tabular}{lrrr}\toprule
+Model and budget & Updates & Test loss (nats) & PPL\\\midrule
+Full attention & 1,800 & 1.7996 $\pm$ 0.0093 & 6.047 \\
+Local + global & 1,800 & 1.7857 $\pm$ 0.0033 & 5.964 \\
+ModalStripe & 1,800 & 1.7213 $\pm$ 0.0016 & 5.592 \\
+Full, calibrated budget & 2,439 & 1.7406 $\pm$ 0.0045 & 5.701 \\
+Full, elapsed-time budget & 4,391 avg. & 1.6472 $\pm$ 0.0073 & 5.192 \\
+Local-only$^{\dagger}$ & 1,800 & 1.7676 $\pm$ 0.0022 & 5.857 \\
+\bottomrule\end{tabular}
+
+% END paper/tables/comparison.tex
+
+\end{minipage}\end{center}
 
 Under the timing-calibrated allowance, attention improves to PPL 5.701, leaving a hybrid advantage of about 1.9\%. Literal elapsed-time matching instead gives attention 4,417, 4,609 and 4,146 updates and reverses the result. Host-load drift prevents treating that reversal as clean compute matching, but it is important to retain. Neither comparison supports an unconditional training-efficiency claim.
 
@@ -422,24 +409,7 @@ The frozen core hashes are:
 The source snapshots are Project Gutenberg ebooks \href{https://www.gutenberg.org/ebooks/1524}{1524}, \href{https://www.gutenberg.org/ebooks/11}{11}, \href{https://www.gutenberg.org/ebooks/2701}{2701}, \href{https://www.gutenberg.org/ebooks/84}{84} and \href{https://www.gutenberg.org/ebooks/1661}{1661}. The manuscript evidence manifest identifies the result JSONs and all 36 evaluated run directories.
 
 \section{Additional results}\label{app:results}
-\begin{center}\begin{minipage}{\textwidth}\centering\small
-\captionof{table}{Final-book reset-128 results. Models use approximately matched parameter counts and context-128 training. Loss is mean $\pm$ sample SD across three seeds. $\dagger$ marks the exploratory local-only control.}
-\label{tab:comparison}
 
-% BEGIN paper/tables/comparison.tex
-\begin{tabular}{lrrr}\toprule
-Model and budget & Updates & Test loss (nats) & PPL\\\midrule
-Full attention & 1,800 & 1.7996 $\pm$ 0.0093 & 6.047 \\
-Local + global & 1,800 & 1.7857 $\pm$ 0.0033 & 5.964 \\
-ModalStripe & 1,800 & 1.7213 $\pm$ 0.0016 & 5.592 \\
-Full, calibrated budget & 2,439 & 1.7406 $\pm$ 0.0045 & 5.701 \\
-Full, elapsed-time budget & 4,391 avg. & 1.6472 $\pm$ 0.0073 & 5.192 \\
-Local-only$^{\dagger}$ & 1,800 & 1.7676 $\pm$ 0.0022 & 5.857 \\
-\bottomrule\end{tabular}
-
-% END paper/tables/comparison.tex
-
-\end{minipage}\end{center}
 
 \begin{center}\begin{minipage}{\textwidth}\centering\small
 \captionof{table}{CPU inference for context-128-trained models. Prefill includes cache construction. Cache counts retained tensors, including reserved capacity, not weights or peak process memory.}

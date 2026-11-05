@@ -19,8 +19,8 @@
 \newcommand{\R}{\mathbb{R}}
 \title{ModalStripe: Modal Memory and Attention\\in Small Language Models}
 \author{Atay Kim\\[3pt]\normalsize Nazarbayev University\\\normalsize Astana, Kazakhstan\\\normalsize\href{mailto:atay.kim@nu.edu.kz}{\texttt{atay.kim@nu.edu.kz}}}
-\date{\small November 5, 2026\quad (v0.5)}
-\hypersetup{pdftitle={ModalStripe: Modal Memory and Attention in Small Language Models},pdfauthor={Atay Kim},pdfsubject={Version 0.5, November 5, 2026}}
+\date{\small November 5, 2026\quad (v0.6)}
+\hypersetup{pdftitle={ModalStripe: Modal Memory and Attention in Small Language Models},pdfauthor={Atay Kim},pdfsubject={Version 0.6, November 5, 2026}}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -89,13 +89,13 @@ We check sampling, shifted targets, document boundaries, future-token influence,
 
 \section{Results}
 \subsection{Prediction quality and training budget}
-Figure~\ref{fig:quality} shows a 7.5\% perplexity reduction against full attention at equal training characters. Adding the modal branch improves on local plus global attention in all three seeds: paired loss differences are $-0.0684$, $-0.0645$ and $-0.0602$ nats. The direction persists with fixed feed-forward widths, where the hybrid has extra parameters (Appendix~\ref{app:results}). This supports adding the complete modal branch in this setup; it does not isolate Fourier modes from other possible extra gated mixers.
+Table~\ref{tab:comparison} shows a 7.5\% perplexity reduction against full attention at equal training characters. Adding the modal branch improves on local plus global attention in all three seeds: paired loss differences are $-0.0684$, $-0.0645$ and $-0.0602$ nats. The direction persists with fixed feed-forward widths, where the hybrid has extra parameters (Appendix~\ref{app:results}). This supports adding the complete modal branch in this setup; it does not isolate Fourier modes from other possible extra gated mixers.
 
-\begin{figure}[htbp]
-\centering\resizebox{\textwidth}{!}{\input{figures/plots/quality.tex}}
-\caption{Final-book reset-128 loss for parameter-matched models; lower is better. Large markers are three-seed means, whiskers are sample SDs, and small markers are individual seeds. (a) All models receive 1,800 updates. $^*$Exploratory local-only control. (b) Attention receives different training allowances. $^\dagger$Elapsed-time runs use 4,417, 4,609 and 4,146 updates; changing host load confounds this comparison. Exact scores are in Table~\ref{tab:comparison}.}
-\label{fig:quality}
-\end{figure}
+\begin{center}\begin{minipage}{\textwidth}\centering\small
+\captionof{table}{Final-book reset-128 results for approximately parameter-matched, context-128-trained models. Loss is mean $\pm$ sample SD across three seeds; PPL exponentiates mean loss. Calibrated attention receives 2,439 updates. Elapsed-time matching uses 4,417, 4,609 and 4,146 updates (rounded mean shown) and is confounded by changing host load. $\dagger$ marks the exploratory local-only control.}
+\label{tab:comparison}
+\input{paper/tables/comparison.tex}
+\end{minipage}\end{center}
 
 Under the timing-calibrated allowance, attention improves to PPL 5.701, leaving a hybrid advantage of about 1.9\%. Literal elapsed-time matching instead gives attention 4,417, 4,609 and 4,146 updates and reverses the result. Host-load drift prevents treating that reversal as clean compute matching, but it is important to retain. Neither comparison supports an unconditional training-efficiency claim.
 
@@ -223,11 +223,7 @@ The frozen core hashes are:
 The source snapshots are Project Gutenberg ebooks \href{https://www.gutenberg.org/ebooks/1524}{1524}, \href{https://www.gutenberg.org/ebooks/11}{11}, \href{https://www.gutenberg.org/ebooks/2701}{2701}, \href{https://www.gutenberg.org/ebooks/84}{84} and \href{https://www.gutenberg.org/ebooks/1661}{1661}. The manuscript evidence manifest identifies the result JSONs and all 36 evaluated run directories.
 
 \section{Additional results}\label{app:results}
-\begin{center}\begin{minipage}{\textwidth}\centering\small
-\captionof{table}{Final-book reset-128 results. Models use approximately matched parameter counts and context-128 training. Loss is mean $\pm$ sample SD across three seeds. $\dagger$ marks the exploratory local-only control.}
-\label{tab:comparison}
-\input{paper/tables/comparison.tex}
-\end{minipage}\end{center}
+
 
 \begin{center}\begin{minipage}{\textwidth}\centering\small
 \captionof{table}{CPU inference for context-128-trained models. Prefill includes cache construction. Cache counts retained tensors, including reserved capacity, not weights or peak process memory.}
